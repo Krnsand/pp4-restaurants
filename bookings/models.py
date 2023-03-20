@@ -65,7 +65,7 @@ class Booking(models.Model):
 # class Meta():
 
     def __str__(self):
-        return 'Booking for {party} at {restaurant} on {date}'.format(party=self.party_size,
+        return 'Booking for {{ guests }} at {{ restaurant }} on {{ date }}'.format(party=self.party_size,
                                                                       restaurant=self.restaurant,
                                                                       date=self.time)
 
