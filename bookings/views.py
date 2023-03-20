@@ -2,4 +2,9 @@ from django.shortcuts import render
 from django.views import generic
 from .models import Booking
 
-# Create your views here.
+
+# look over this
+class BookingList(generic.ListView):
+    model = Booking
+    queryset = Booking.objects.filter()
+    template_name = "index.html"
