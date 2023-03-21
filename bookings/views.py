@@ -8,3 +8,4 @@ class BookingList(generic.ListView):
     model = Booking
     queryset = Booking.objects.filter()
     template_name = "index.html"
+    context_object_name = 'booking_list'

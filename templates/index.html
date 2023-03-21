@@ -38,7 +38,9 @@
 </head>
 
 <body>
-
+{% for booking in booking_list %}
+{{ booking.user_id }}
+{% endfor %}
   <!-- ======= Top Bar ======= -->
   <div id="topbar" class="d-flex align-items-center fixed-top">
     <div class="container d-flex justify-content-center justify-content-md-between">
