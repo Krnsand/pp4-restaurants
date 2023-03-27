@@ -9,11 +9,12 @@ import datetime as dt
 
 # Create your models here.
 
-class User(models.Model):
-    first_name = models.CharField(max_length=100, null=True, blank=True)
-    last_name = models.CharField(max_length=100, null=True, blank=True)
-    email = models.EmailField(max_length=100, unique=True)
-    phone_number = PhoneNumberField(blank=True)
+class User(AbstractUser):
+    user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
+#    first_name = models.CharField(max_length=100, null=True, blank=True)
+#    last_name = models.CharField(max_length=100, null=True, blank=True)
+#    email = models.EmailField(max_length=100, unique=True)
+#    phone_number = PhoneNumberField(blank=True)
 
 
 TIME_CHOICES = (

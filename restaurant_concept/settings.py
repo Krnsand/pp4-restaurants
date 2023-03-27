@@ -32,6 +32,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['restaurant-concept.herokuapp.com', 'localhost']
 
+AUTH_USER_MODEL = 'auth.User'
+
 
 # Application definition
 
