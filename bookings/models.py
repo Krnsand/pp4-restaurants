@@ -65,9 +65,9 @@ class Booking(models.Model):
     #    ordering = ['-created_on']
 
     def __str__(self):
-        return 'Booking for {{ guests }} at {{ restaurant }} on {{ date }}'.format(guests=self.guests,
+        return 'Booking for {guests} at {restaurant} on {date}'.format(guests=self.guests,
                                                                       restaurant=self.restaurant,
-                                                                      date=self.time)
+                                                                      date=self.date)
 
 
 class Restaurants(models.Model):
