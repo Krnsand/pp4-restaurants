@@ -13,4 +13,4 @@ class BookingAdmin(SummernoteModelAdmin):
     summernote_fields = ('comment')
 
 
-admin.site.register(User, UserAdmin)
+# admin.site.register(User, UserAdmin)
