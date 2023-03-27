@@ -9,12 +9,11 @@ import datetime as dt
 
 # Create your models here.
 
-class User(AbstractUser):
-    user = User.objects.create_user('myusername', 'myemail@crazymail.com', 'mypassword')
-#    first_name = models.CharField(max_length=100, null=True, blank=True)
-#    last_name = models.CharField(max_length=100, null=True, blank=True)
-#    email = models.EmailField(max_length=100, unique=True)
-#    phone_number = PhoneNumberField(blank=True)
+class User(models.Model):
+    first_name = models.CharField(max_length=100, null=True, blank=True)
+    last_name = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=100, unique=True)
+    phone_number = PhoneNumberField(blank=True)
 
 
 TIME_CHOICES = (
@@ -53,7 +52,6 @@ RST_CHOICES = (
 
 
 class Booking(models.Model):
-    # user_id = models.ForeignKey(User, on_delete=models.CASCADE, related_name='bookings')
     restaurant = models.CharField(max_length=100, choices=RST_CHOICES, blank=True)
     date = models.DateField(max_length=10, default=timezone.now, blank=True)
     time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
