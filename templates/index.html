@@ -1,6 +1,43 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
 
-{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Restaurants</title>
+</head>
 
+<body>
+    {% for booking in booking_list %}
+    {{ booking.user_id }}
+    {% endfor %}
+    <nav id="navbar" class="navbar-">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Restaurants</a></li>
+            <li><a href="#">Contact</a></li>
+            {% if user.is_authenticated %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+            </li>
+            {% endif %}
+            <i class="bi bi-list mobile-nav-toggle"></i>
+    </nav><!-- .navbar -->
+    <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+    </ul>
+    </nav>
 
-{% endblock %}
+    <h1>Home Page</h1>
+
+</body>
+
+</html>
