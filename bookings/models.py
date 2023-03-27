@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
 from cloudinary.models import CloudinaryField
 from phonenumber_field.modelfields import PhoneNumberField
 from django.utils import timezone
