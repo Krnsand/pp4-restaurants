@@ -29,6 +29,9 @@
             <li><a href="#">Contact</a></li>
             {% if user.is_authenticated %}
             <li class="nav-item">
+                <a class="nav-link" href="{% url 'bookings' %}">My Bookings</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
             </li>
             {% else %}
