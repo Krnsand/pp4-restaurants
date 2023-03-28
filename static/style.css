@@ -1,17 +1,17 @@
 body {
     font-family: "Open Sans", sans-serif;
-    background: #0c0b09;
+    background: #051b02;
     color: #fff;
 }
 
 a {
-    color: #cda45e;
+    color: #f39200;
     text-decoration: none;
 }
 
 a:hover {
-    color: #d9ba85;
-    text-decoration: none;
+    color: #f7af43;
+    text-decoration: underline;
 }
   
 h1,
@@ -76,17 +76,17 @@ h6 {
     height: 44px;
     border-radius: 50px;
     transition: all 0.4s;
-    border: 2px solid #cda45e;
+    border: 2px solid #f7af43;
   }
   
   .back-to-top i {
     font-size: 28px;
-    color: #cda45e;
+    color: #f7af43;
     line-height: 0;
   }
   
   .back-to-top:hover {
-    background: #cda45e;
+    background: #f7af43;
     color: #1a1814;
   }
   
@@ -104,7 +104,7 @@ h6 {
 --------------------------------------------------------------*/
 .book-a-table-btn {
     margin: 0 0 0 15px;
-    border: 2px solid #cda45e;
+    border: 2px solid #f39200;
     color: #fff;
     border-radius: 50px;
     padding: 8px 25px;
@@ -116,7 +116,7 @@ h6 {
   }
   
   .book-a-table-btn:hover {
-    background: #cda45e;
+    background: #f7af43;
     color: #fff;
   }
   
