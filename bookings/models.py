@@ -52,8 +52,8 @@ RST_CHOICES = (
 
 # DURATION_CHOICES = (
 #    (dt.time(hour=1, minute=30), "1:30"),
-#    (dt.time(hour=2, minute=00), "2:00"),
-#)
+#    (dt.time(hour=2, minute=00), "2"),
+# )
 
 
 class Booking(models.Model):
@@ -62,16 +62,6 @@ class Booking(models.Model):
     time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
-    # duration = models.TimeField(max_length=10, choices=DURATION_CHOICES, default=timezone.now)
-
-    # class Meta():
-    #    """To display the recipes by created_on in descending order"""
-    #    ordering = ['-date']
-
-    def __str__(self):
-        return 'Booking for {guests} at {restaurant} on {date}'.format(guests=self.guests,
-                                                                       restaurant=self.restaurant,
-                                                                       date=self.date)
 
 
 class Restaurants(models.Model):
@@ -80,7 +70,20 @@ class Restaurants(models.Model):
     settings_id = models.IntegerField(default=False)
 
 
-class Settings():
+class Settings(models.Model):
     opens = models.IntegerField()
     closes = models.IntegerField()
+    # duration = models.TimeField(max_length=10, choices=DURATION_CHOICES, default=timezone.now)
     active_mon_tues = models.BooleanField(default=False)
+
+
+# class ViewBookings(models.Model):
+
+    # class Meta():
+    #    """To display the recipes by created_on in descending order"""
+    #    ordering = ['-date']
+
+   # def __str__(self):
+    #    return 'Booking for {guests} at {restaurant} on {date}'.format(guests=self.guests,
+    #                                                                   restaurant=self.restaurant,
+    #                                                                   date=self.date)
