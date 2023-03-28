@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import Booking, User
+from .models import Booking, Restaurant
 from django_summernote.admin import SummernoteModelAdmin
 
 
@@ -13,4 +13,6 @@ class BookingAdmin(SummernoteModelAdmin):
     summernote_fields = ('comment')
 
 
-# admin.site.register(User, UserAdmin)
+@admin.register(Restaurant)
+class RestaurantAdmin(admin.ModelAdmin):
+    pass
