@@ -50,23 +50,34 @@ RST_CHOICES = (
     ("3", "3"),
 )
 
+# DURATION_CHOICES = (
+#    (dt.time(hour=1, minute=30), "1:30"),
+#    (dt.time(hour=2, minute=00), "2:00"),
+#)
+
+
+class Table(models.Model):
+    number = models.IntegerField(blank=True, null=True)
+    capacity = models.IntegerField(blank=True, null=True)
+
 
 class Booking(models.Model):
+    table = models.ForeignKey(Table, on_delete=models.CASCADE, default="")
     restaurant = models.CharField(max_length=100, choices=RST_CHOICES, blank=True)
     date = models.DateField(max_length=10, default=timezone.now, blank=True)
     time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
-    # created_on = models.DateTimeField(auto_now=True)
+    # duration = models.TimeField(max_length=10, choices=DURATION_CHOICES, default=timezone.now)
 
     # class Meta():
     #    """To display the recipes by created_on in descending order"""
-    #    ordering = ['-created_on']
+    #    ordering = ['-date']
 
     def __str__(self):
         return 'Booking for {guests} at {restaurant} on {date}'.format(guests=self.guests,
-                                                                      restaurant=self.restaurant,
-                                                                      date=self.date)
+                                                                       restaurant=self.restaurant,
+                                                                       date=self.date)
 
 
 class Restaurants(models.Model):
