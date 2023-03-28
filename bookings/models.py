@@ -56,13 +56,7 @@ RST_CHOICES = (
 #)
 
 
-class Table(models.Model):
-    number = models.IntegerField(blank=True, null=True)
-    capacity = models.IntegerField(blank=True, null=True)
-
-
 class Booking(models.Model):
-    table = models.ForeignKey(Table, on_delete=models.CASCADE, default="")
     restaurant = models.CharField(max_length=100, choices=RST_CHOICES, blank=True)
     date = models.DateField(max_length=10, default=timezone.now, blank=True)
     time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
