@@ -9,11 +9,11 @@ import datetime as dt
 
 # Create your models here.
 
-class User(models.Model):
-    first_name = models.CharField(max_length=100, null=True, blank=True)
-    last_name = models.CharField(max_length=100, null=True, blank=True)
-    email = models.EmailField(max_length=100, unique=True)
-    phone_number = PhoneNumberField(blank=True)
+# class User(models.Model):
+#    first_name = models.CharField(max_length=100, null=True, blank=True)
+#    last_name = models.CharField(max_length=100, null=True, blank=True)
+#    email = models.EmailField(max_length=100, unique=True)
+#    phone_number = PhoneNumberField(blank=True)
 
 
 TIME_CHOICES = (
@@ -50,31 +50,21 @@ RST_CHOICES = (
     ("3", "3"),
 )
 
-# DURATION_CHOICES = (
-#    (dt.time(hour=1, minute=30), "1:30"),
-#    (dt.time(hour=2, minute=00), "2"),
-# )
+
+class Restaurant(models.Model):
+    name = models.CharField(max_length=100)
+    adress = models.CharField(max_length=100)
+    opens = models.TimeField()
+    closes = models.TimeField()
+    active_mon_tues = models.BooleanField(default=False)
 
 
 class Booking(models.Model):
-    restaurant = models.CharField(max_length=100, choices=RST_CHOICES, blank=True)
+    restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
     date = models.DateField(max_length=10, default=timezone.now, blank=True)
     time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
-
-
-class Restaurants(models.Model):
-    name = models.CharField(max_length=100)
-    adress = models.CharField(max_length=100)
-    settings_id = models.IntegerField(default=False)
-
-
-class Settings(models.Model):
-    opens = models.IntegerField()
-    closes = models.IntegerField()
-    # duration = models.TimeField(max_length=10, choices=DURATION_CHOICES, default=timezone.now)
-    active_mon_tues = models.BooleanField(default=False)
 
 
 # class ViewBookings(models.Model):
@@ -83,7 +73,7 @@ class Settings(models.Model):
     #    """To display the recipes by created_on in descending order"""
     #    ordering = ['-date']
 
-   # def __str__(self):
+    # def __str__(self):
     #    return 'Booking for {guests} at {restaurant} on {date}'.format(guests=self.guests,
     #                                                                   restaurant=self.restaurant,
     #                                                                   date=self.date)
