@@ -21,5 +21,5 @@ from .models import Booking
 class BookingList(generic.ListView):
     model = Booking
     queryset = Booking.objects.filter()
-    template_name = "index.html"
+    template_name = "bookings.html"
     context_object_name = 'booking_list'
