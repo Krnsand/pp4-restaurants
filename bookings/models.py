@@ -66,14 +66,14 @@ class Booking(models.Model):
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
 
+    def __str__(self):
+        return 'Booking for {guests} guests at {restaurant} on {date} at {time}'.format(guests=self.guests,
+                                                                       restaurant=self.restaurant,
+                                                                       date=self.date,
+                                                                       time=self.time)
+
 
 # class ViewBookings(models.Model):
-
     # class Meta():
     #    """To display the recipes by created_on in descending order"""
     #    ordering = ['-date']
-
-    # def __str__(self):
-    #    return 'Booking for {guests} at {restaurant} on {date}'.format(guests=self.guests,
-    #                                                                   restaurant=self.restaurant,
-    #                                                                   date=self.date)
