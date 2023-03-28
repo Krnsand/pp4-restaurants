@@ -27,8 +27,8 @@
 </head>
 
 <body>
-    {% for booking in booking_list %}
-    {{ booking.user_id }}
+    Hi{% for booking in booking_list %}
+    {{ booking.restaurant.name }} Hi
     {% endfor %}
 
     <header id="header" class="fixed-top d-flex align-items-cente">
