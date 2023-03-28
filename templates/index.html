@@ -27,9 +27,9 @@
 </head>
 
 <body>
-    Hi{% for booking in booking_list %}
+<!-- Hi{% for booking in booking_list %}
     {{ booking.restaurant.name }} Hi
-    {% endfor %}
+    {% endfor %} --> 
 
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -43,7 +43,7 @@
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Bookings</a>
+                        <a class="nav-link" href="{% url 'bookings' %}">My Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
