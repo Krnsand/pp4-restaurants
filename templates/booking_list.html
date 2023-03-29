@@ -1,0 +1,12 @@
+{% extends 'base-index.html' %}
+
+{% block content %}
+
+
+  <h1>Table Bookings</h1>
+
+      Hi{% for booking in booking_list %}
+      {{ booking.restaurant.name }} Hi
+      {% endfor %}
+   
+{% endblock %}

@@ -1,5 +1,7 @@
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,14 +29,15 @@
 </head>
 
 <body>
-<!-- Hi{% for booking in booking_list %}
-    {{ booking.restaurant.name }} Hi
+<!--{% for booking in booking_list %}
+    {{ booking.restaurant.name }}
+    Hi
     {% endfor %} --> 
 
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="#">Restaurantly</a></h1>
+            <h1 class="logo me-auto me-lg-0"><a href="#">Vivid Fushion</a></h1>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#">Home</a></li>
@@ -43,7 +46,7 @@
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'bookings' %}">My Bookings</a>
+                        <a class="nav-link" href="#">My Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -63,18 +66,16 @@
             </nav>
     </header>
 
-    <h1>Restaurant Concept</h1>
-
     <!-- ======= Hero Section ======= -->
     <section id="hero" class="d-flex align-items-center">
         <div class="container position-relative text-center text-lg-start" data-aos="zoom-in" data-aos-delay="100">
             <div class="row">
                 <div class="col-lg-8">
-                    <h1>Welcome to <span>Restaurantly</span></h1>
-                    <h2>Delivering great food for more than 18 years!</h2>
+                    <h1>Welcome to <span>Vivid Fushion</span></h1>
+                    <h2>A place to try great food</h2>
 
                     <div class="btns">
-                        <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Menu</a>
+                        <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
                         <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
                     </div>
                 </div>
@@ -193,6 +194,11 @@
                 <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form"
                     data-aos="fade-up" data-aos-delay="100">
                     <div class="row">
+                        <div class="col-lg-4 col-md-6 form-group">
+                            <input type="text" name="restaurant" class="form-control" id="restaurant" placeholder="Restaurant"
+                                data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+                            <div class="validate"></div>
+                        </div>
                         <div class="col-lg-4 col-md-6 form-group">
                             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
                                 data-rule="minlen:4" data-msg="Please enter at least 4 chars">
