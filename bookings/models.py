@@ -44,13 +44,6 @@ GUEST_CHOICES = (
 )
 
 
-# RST_CHOICES = (
-#    ("1", "1"),
-#    ("2", "2"),
-#    ("3", "3"),
-# )
-
-
 class Restaurant(models.Model):
     name = models.CharField(max_length=100)
     adress = models.CharField(max_length=100)
@@ -61,6 +54,8 @@ class Restaurant(models.Model):
 
 class Booking(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100, null=True, blank=True)
+    email = models.EmailField(max_length=100, unique=True, default="")
     date = models.DateField(max_length=10, default=timezone.now, blank=True)
     time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
@@ -71,14 +66,3 @@ class Booking(models.Model):
                                                                        restaurant=self.restaurant,
                                                                        date=self.date,
                                                                        time=self.time)
-
-
-# class Reservation(models.Model):
-#       model = Article
-#       fields = ['pub_date', 'headline', 'content', 'reporter']
-
-
-# class ViewBookings(models.Model):
-    # class Meta():
-    #    """To display the recipes by created_on in descending order"""
-    #    ordering = ['-date']
