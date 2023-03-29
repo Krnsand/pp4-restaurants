@@ -27,11 +27,7 @@
 </head>
 
 <body>
-
-<!--{% for booking in booking_list %}
-    {{ booking.restaurant.name }}
-    Hi
-    {% endfor %} --> 
+    <center> 
 
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -39,7 +35,7 @@
             <h1 class="logo me-auto me-lg-0"><a href="#">Restaurantly</a></h1>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="#">Home</a></li>
+                    <li><a class="nav-link scrollto active" href="{% url 'bookings' %}">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About Us</a></li>
                     <li><a class="nav-link scrollto" href="#restaurants">Restaurants</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
@@ -122,5 +118,6 @@
             AOS.init();
           </script>
 </body>
+</center>
 
 </html>
