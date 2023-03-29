@@ -1,20 +1,20 @@
-# from django import forms
-# from django.forms import ModelForm
+from django import forms
+from django.forms import ModelForm
 # from datetime import datetime
-# from .models import RestaurantForm
+from .models import Booking
 
 
 # Create a Restaurant booking form
-"""
- class RestaurantForm(forms.ModelForm):
+
+class RestaurantForm(forms.ModelForm):
     class Meta():
-        model = Reservation
-        fields = ('restaurant', 'name', 'email_adress', 'phone_number', 'date',
-        'time', 'guests', 'comment')
+        model = Booking
+        fields = ('restaurant', 'name', 'email', 'date',
+                  'time', 'guests', 'comment')
 
 
 
-    """
+
 
 
 # class ContactForm(forms.Form):
