@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.views.generic import View, ListView, DetailView
 from .models import Booking
-# from .forms import RestaurantForm
+from .forms import RestaurantForm
 
 
 # look over this
@@ -13,8 +13,20 @@ from .models import Booking
 #        return render(request, 'index.html')
 
 def add_reservation(request):
-    from = RestaurantForm
-    return render(request, 'add_reservation.html', {'form':form})
+    submitted = False
+    if request.method == 'POST':
+        form = RestaurantForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/add_reservation?submitted=True')
+
+    else:
+        form = RestaurantForm
+        if 'submitted' in request.GET:
+            submitted = True
+        return render(request, 'add_reservation.html', {'form': form,
+                                                        'submitted': submitted})
+
 
 class BookingList(generic.ListView):
     model = Booking
