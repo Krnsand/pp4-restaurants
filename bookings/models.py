@@ -73,8 +73,7 @@ class Booking(models.Model):
                                                                        time=self.time)
 
 
-# class RestaurantForm(ModelForm):
-#   class Meta:
+# class Reservation(models.Model):
 #       model = Article
 #       fields = ['pub_date', 'headline', 'content', 'reporter']
 
