@@ -11,6 +11,24 @@ class RestaurantForm(forms.ModelForm):
         model = Booking
         fields = ('restaurant', 'name', 'email', 'date',
                   'time', 'guests', 'comment')
+        labels = {
+            'restaurant': '',
+            'name': '',
+            'email': '',
+            'date': '',
+            'time': '',
+            'guests': '',
+            'comment': '',
+        }
+        widgets = {
+            'restaurant': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Restaurant'}),
+            'name': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Your Name'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control', 'placeholder': 'Your Email'}),
+            'date': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Date'}),
+            'time': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Time'}),
+            'guests': forms.TextInput(attrs={'class': 'form-control', 'placeholder': '# of Guests'}),
+            'comment': forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'Comment anything we might need to know for your visit'}),
+        }
 
 
 
