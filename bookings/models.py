@@ -44,11 +44,11 @@ GUEST_CHOICES = (
 )
 
 
-RST_CHOICES = (
-    ("1", "1"),
-    ("2", "2"),
-    ("3", "3"),
-)
+# RST_CHOICES = (
+#    ("1", "1"),
+#    ("2", "2"),
+#    ("3", "3"),
+# )
 
 
 class Restaurant(models.Model):
@@ -71,6 +71,12 @@ class Booking(models.Model):
                                                                        restaurant=self.restaurant,
                                                                        date=self.date,
                                                                        time=self.time)
+
+
+# class RestaurantForm(ModelForm):
+#   class Meta:
+#       model = Article
+#       fields = ['pub_date', 'headline', 'content', 'reporter']
 
 
 # class ViewBookings(models.Model):
