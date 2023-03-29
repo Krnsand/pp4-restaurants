@@ -1,19 +1,24 @@
 {% extends 'base-index.html' %}
 
-{% load crispy_forms_tags %}
-
 {% block content %}
 
 <center>
     <h1>Make a Reservation at One of Our Restaurants!</h1>
     <br>
+    {% if submitted %}
+    Your reservation is now made. We look forward to seeing you!
+
+    {% else %}
+
+
+
     <form action="" method="POST" class="my-class">
         {% csrf_token %}
-        {{ form.as_p | crispy }}
+        {{ form.as_p }}
         <input type="submit" value="Submit" class="btn btn-seconday">
     </form>
-
+    {% endif %}
 </center>
 
-   
+
 {% endblock %}
