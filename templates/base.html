@@ -43,6 +43,7 @@
                         <li><a class="nav-link scrollto active" href="#">Home</a></li>
                         <li><a class="nav-link scrollto" href="#about">About Us</a></li>
                         <li><a class="nav-link scrollto" href="#restaurants">Restaurants</a></li>
+                        <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
                         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
@@ -78,8 +79,8 @@
                         <h2>A place to try great food</h2>
 
                         <div class="btns">
-                            <a href="#menu" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
-                            <a href="#book-a-table" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+                            <a href="#restaurants" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
+                            <a href="{% url 'add-reservation' %}" class="btn-book animated fadeInUp scrollto">Book a Table</a>
                         </div>
                     </div>
                 </div>
@@ -142,41 +143,47 @@
                 <div class="container" data-aos="fade-up">
 
                     <div class="section-title">
-                        <h2>Why Us</h2>
-                        <p>Why Choose Our Restaurant</p>
+                        <h2>Our Restaurants</h2>
+                        <p>Read about our Restaurants</p>
                     </div>
 
                     <div class="row">
 
                         <div class="col-lg-4">
+                            <a href="{% url 'violet' %}">
                             <div class="box" data-aos="zoom-in" data-aos-delay="100">
                                 <span>01</span>
-                                <h4>Lorem Ipsum</h4>
+                                <h4>Violet Fusion</h4>
                                 <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus
                                     vero
                                     placeat</p>
                             </div>
+                        </a>
                         </div>
 
                         <div class="col-lg-4 mt-4 mt-lg-0">
+                            <a href="{% url 'green' %}">
                             <div class="box" data-aos="zoom-in" data-aos-delay="200">
                                 <span>02</span>
-                                <h4>Repellat Nihil</h4>
+                                <h4>Green Dining</h4>
                                 <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et
                                     vel dire
                                     leno para
                                     dest</p>
                             </div>
+                        </a>
                         </div>
 
                         <div class="col-lg-4 mt-4 mt-lg-0">
+                            <a href="{% url 'orange' %}">
                             <div class="box" data-aos="zoom-in" data-aos-delay="300">
                                 <span>03</span>
-                                <h4> Ad ad velit qui</h4>
+                                <h4>Orange Cushion</h4>
                                 <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo
                                     vel nam
                                     quis</p>
                             </div>
+                        </a>
                         </div>
 
                     </div>
@@ -251,7 +258,7 @@
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
                     <h2>Gallery</h2>
-                    <p>Some photos from Our Restaurant</p>
+                    <p>Some photos from Our Restaurants</p>
                 </div>
             </div>
 
@@ -261,9 +268,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-1.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-1.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-1.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -271,9 +278,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-2.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-2.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-2.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -281,9 +288,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-3.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-3.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-3.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -291,9 +298,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-4.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-4.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-4.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -301,9 +308,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-5.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-5.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-5.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -311,9 +318,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-6.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-6.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-6.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -321,9 +328,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox"
+                            <a href="../static/assets/img/gallery/gallery-7.jpg" class="gallery-lightbox"
                                 data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-7.jpg" alt=""
+                                <img src="../static/assets/img/gallery/gallery-7.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
@@ -331,9 +338,9 @@
 
                     <div class="col-lg-3 col-md-4">
                         <div class="gallery-item">
-                            <a href="../static/Restaurantly/assets/img/gallery/gallery-8.jpg" class="gallery-lightbox"
-                                data-gall="gallery-item">
-                                <img src="../static/Restaurantly/assets/img/gallery/gallery-8.jpg" alt=""
+                            <a href="../static/assets/img/gallery/gallery-8.jpg"class="gallery-lightbox"
+                            data-gall="gallery-item">
+                                <img src="../static/assets/img/gallery/gallery-8.jpg" alt=""
                                     class="img-fluid">
                             </a>
                         </div>
