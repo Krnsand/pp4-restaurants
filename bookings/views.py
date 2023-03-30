@@ -18,21 +18,22 @@ def add_reservation(request):
         form = RestaurantForm(request.POST)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect('/add_reservation?submitted=True')
+            return HttpResponseRedirect("/add_reservation?submitted=True")
 
     else:
         form = RestaurantForm
-        if 'submitted' in request.GET:
+        if "submitted" in request.GET:
             submitted = True
-    return render(request, 'add_reservation.html', {'form': form,
-                                                    'submitted': submitted})
+    return render(
+        request, "add_reservation.html", {"form": form, "submitted": submitted}
+    )
 
 
 class BookingList(generic.ListView):
     model = Booking
     queryset = Booking.objects.all()
     template_name = "booking_list.html"
-    context_object_name = 'booking_list'
+    context_object_name = "booking_list"
 
 
 class VioletFusion(View):
