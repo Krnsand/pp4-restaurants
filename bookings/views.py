@@ -7,6 +7,11 @@ from .models import Booking
 from .forms import RestaurantForm
 
 
+class HomePage(View):
+    def get(self, request):
+        return render(request, "base.html")
+
+
 def add_reservation(request):
     submitted = False
     if request.method == "POST":
@@ -20,13 +25,13 @@ def add_reservation(request):
         if 'submitted' in request.GET:
             submitted = True
     return render(request, 'add_reservation.html', {'form': form,
-                                                        'submitted': submitted})
+                                                    'submitted': submitted})
 
 
 class BookingList(generic.ListView):
     model = Booking
-    queryset = Booking.objects.filter()
-    template_name = "base.html"
+    queryset = Booking.objects.all()
+    template_name = "booking_list.html"
     context_object_name = 'booking_list'
 
 
@@ -64,9 +69,3 @@ class OrangeCushion(View):
         Get method, renders orange_cushion.html.
         """
         return render(request, "orange_cushion.html")
-
-
-# look over this
-# class HomePage(View):
-#    def get(request):
-#        return render(request, 'base.html')
