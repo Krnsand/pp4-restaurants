@@ -30,6 +30,42 @@ class BookingList(generic.ListView):
     context_object_name = 'booking_list'
 
 
+class VioletFusion(View):
+    """
+    Simple view to render the violet_fusion.html page.
+    """
+
+    def get(self, request):
+        """
+        Get method, renders violet_fusion.html.
+        """
+        return render(request, "violet_fusion.html")
+
+
+class GreenDining(View):
+    """
+    Simple view to render the green_dining.html page.
+    """
+
+    def get(self, request):
+        """
+        Get method, renders green_dining.html.
+        """
+        return render(request, "green_dining.html")
+
+
+class OrangeCushion(View):
+    """
+    Simple view to render the orange_cushion.html.
+    """
+
+    def get(self, request):
+        """
+        Get method, renders orange_cushion.html.
+        """
+        return render(request, "orange_cushion.html")
+
+
 # look over this
 # class HomePage(View):
 #    def get(request):
