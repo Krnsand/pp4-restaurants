@@ -1,7 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User, AbstractUser
+from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
-from phonenumber_field.modelfields import PhoneNumberField
 from django.utils import timezone
 from django.db.models import IntegerField, Model
 import datetime as dt
@@ -36,7 +35,7 @@ GUEST_CHOICES = (
 
 
 class Restaurant(models.Model):
-    name = models.CharField('Restaurant Name', max_length=100)
+    name = models.CharField("Restaurant Name", max_length=100)
     adress = models.CharField(max_length=100)
     opens = models.TimeField()
     closes = models.TimeField()
@@ -48,21 +47,26 @@ class Restaurant(models.Model):
 
 class Booking(models.Model):
     restaurant = models.ForeignKey(Restaurant, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100, null=True, blank=True)
     email = models.EmailField(max_length=100, default="")
     date = models.DateField(max_length=10, default=timezone.now, blank=True)
-    time = models.TimeField(max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True)
+    time = models.TimeField(
+        max_length=10, choices=TIME_CHOICES, default=timezone.now, blank=True
+    )
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
 
-#    class Meta:
-#        ordering = ['date']
+    #    class Meta:
+    #        ordering = ['date']
 
     def __str__(self):
-        return 'Booking for {guests} guests at {restaurant} on {date} at {time}'.format(guests=self.guests,
-                                                                                        restaurant=self.restaurant,
-                                                                                        date=self.date,
-                                                                                        time=self.time)
+        return "Booking for {guests} guests at {restaurant} on {date} at {time}".format(
+            guests=self.guests,
+            restaurant=self.restaurant,
+            date=self.date,
+            time=self.time,
+        )
 
 
 # class User(models.Model):
