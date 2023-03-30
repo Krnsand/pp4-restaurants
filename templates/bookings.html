@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+
+  {% block content %}
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h1>My Reservations</h1>
+  <br>
+
+  <ul>
+    {% for booking in booking_list %}
+
+    <div class="card">
+      <div class="card-header">
+       {{ booking.date }}
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{ booking.restaurant.name }}</h5>
+        <p class="card-text">
+          
+            <strong>Date:</strong> 
+            {{ booking.date }}<br>
+            <strong>Time:</strong> 
+            {{ booking.time }}<br>
+            <strong>Number of Guests:</strong> 
+            {{ booking.guests }}<br>
+            <strong>Additional Comment:</strong> 
+            {{ booking.comment }}<br>
+
+        </p>
+      </div>
+    </div>
+  <br>
+  <br>
+    {% endfor %}
+
+  {% endblock %}
