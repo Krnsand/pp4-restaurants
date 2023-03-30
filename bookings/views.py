@@ -32,7 +32,7 @@ def add_reservation(request):
 class BookingList(generic.ListView):
     model = Booking
     queryset = Booking.objects.all()
-    template_name = "booking_list.html"
+    template_name = "bookings.html"
     context_object_name = "booking_list"
 
 
