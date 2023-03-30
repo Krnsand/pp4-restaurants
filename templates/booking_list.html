@@ -1,12 +1,28 @@
 {% extends 'index.html' %}
 
-{% block content %}
+<div class="container">
+  {% block content %}
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
+  <h1>My Reservations</h1>
+  <ul>
+    {% for booking in booking_list %}
+    <strong>{{ booking.restaurant.name }}</strong>
+    <ul>
+    <li>Date: {{ booking.date }}</li>
+    <li>Time: {{ booking.time }}</li>
+    <li>Number of Guests: {{ booking.guests }}</li>
+    <li>Additional Comment: {{ booking.comment }}</li>
+  </ul>
+  <br>
+  <hr>
+    {% endfor %}
 
-  <h1>Table Bookings</h1>
-
-      Hi{% for booking in booking_list %}
-      {{ booking.restaurant.name }} Hi
-      {% endfor %}
-   
-{% endblock %}
+  {% endblock %}
+</div>
