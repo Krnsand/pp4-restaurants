@@ -16,3 +16,8 @@ class BookingAdmin(SummernoteModelAdmin):
 @admin.register(Restaurant)
 class RestaurantAdmin(admin.ModelAdmin):
     pass
+
+
+# @admin.register(User)
+# class UserAdmin(admin.ModelAdmin):
+#    pass
