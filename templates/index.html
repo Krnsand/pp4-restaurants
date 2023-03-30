@@ -20,18 +20,18 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous">
     </script>
-    
+
     <!-- AOS links -->
-        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <!-- Main CSS -->
-        <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 
     <title>Hello Restaurants</title>
 </head>
 
-<body> 
+<body>
 
     <header id="header" class="fixed-top d-flex align-items-cente">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
@@ -39,11 +39,11 @@
             <h1 class="logo me-auto me-lg-0"><a href="#">Vivid Fushion</a></h1>
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
-                    <li><a class="nav-link scrollto active" href="{% url 'bookings' %}">Home</a></li>
-                    <li><a class="nav-link scrollto" href="#restaurants">Restaurants</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}">Restaurants</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link" href="#">My Bookings</a>
+                        <a class="nav-link active" href="{% url 'bookings' %}">My Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -58,7 +58,7 @@
                     {% endif %}
                     <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
-            <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+            <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
             </ul>
             </nav>
     </header>
@@ -67,6 +67,8 @@
     <div class="container">
 
         {% block content %}
+
+        
         {% endblock %}
     </div>
 
@@ -114,12 +116,12 @@
     </footer><!-- End Footer -->
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="fa-solid fa-chevron-up"></i></a>
-    
-        <script>
-            AOS.init();
-          </script>
-          <script src="{% static 'assets/js/main.js' %}"></script>
+            class="fa-solid fa-chevron-up"></i></a>
+
+    <script>
+        AOS.init();
+    </script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 
 </html>
