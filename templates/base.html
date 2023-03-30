@@ -40,20 +40,20 @@
                 <h1 class="logo me-auto me-lg-0"><a href="#">Vivid Fushion</a></h1>
                 <nav id="navbar" class="navbar order-last order-lg-0">
                     <ul>
-                        <li><a class="nav-link scrollto active" href="#">Home</a></li>
+                        <li><a class="nav-link scrollto" href="#">Home</a></li>
                         <li><a class="nav-link scrollto" href="#about">About Us</a></li>
                         <li><a class="nav-link scrollto" href="#restaurants">Restaurants</a></li>
                         <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
                         <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                         {% if user.is_authenticated %}
                         <li class="nav-item">
-                            <a class="nav-link" href="#">My Bookings</a>
+                            <a class="nav-link" href="{% url 'bookings' %}">My Bookings</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                         </li>
-                        <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a
-                            table</a>
+                       <!-- <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a
+                            table</a>-->
                         {% else %}
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
@@ -64,8 +64,9 @@
                         {% endif %}
                         <i class="bi bi-list mobile-nav-toggle"></i>
                 </nav>
-                <!-- .navbar 
-            <a href="#book-a-table" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>-->
+                <!-- .navbar -->
+            <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a
+                            table</a>
                 </ul>
                 </nav>
         </header>
