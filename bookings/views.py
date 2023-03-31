@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
+from django.utils.decorators import method_decorator
 from django.views.generic import View, ListView, DetailView
 from .models import Booking
 from .forms import RestaurantForm
@@ -15,6 +17,7 @@ class HomePage(View):
 def add_reservation(request):
     submitted = False
     if request.method == "POST":
+        user = request.user
         form = RestaurantForm(request.POST)
         if form.is_valid():
             form.save()
@@ -29,9 +32,10 @@ def add_reservation(request):
     )
 
 
+@method_decorator(login_required, name='dispatch')
 class BookingList(generic.ListView):
     model = Booking
-    queryset = Booking.objects.all()
+    queryset = Booking.objects.all().order_by('date')
     template_name = "bookings.html"
     context_object_name = "booking_list"
 
