@@ -1,50 +1,51 @@
 {% extends 'index.html' %}
 
-  {% block content %}
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+{% block content %}
 
-  <h1>My Reservations</h1>
-  <br>
+<br><br><br><br><br><br><br>
 
-  {% if user.is_authenticated %}
+<h1>My Reservations</h1>
+<br>
+
+{% if user.is_authenticated %}
 
     {% for booking in booking_list %}
 
-    <div class="card">
-      <div class="card-header">
-       {{ booking.date }}
-      </div>
-      <div class="card-body">
-        <h5 class="card-title">{{ booking.restaurant.name }}</h5>
-        <p class="card-text">
-          
-            <strong>Date:</strong> 
-            {{ booking.date }}<br>
-            <strong>Time:</strong> 
-            {{ booking.time }}<br>
-            <strong>Number of Guests:</strong> 
-            {{ booking.guests }}<br>
-            <strong>Additional Comment:</strong> 
-            {{ booking.comment }}<br>
+    {% if user.id == booking.user.id %}
 
-        </p>
+      <div class="card">
+        <div class="card-header">
+          {{ booking.date }}
       </div>
-    </div>
+        <div class="card-body">
+          <h5 class="card-title">{{ booking.restaurant.name }}</h5>
+            <p class="card-text">
+
+              <strong>Date:</strong>
+              {{ booking.date }}<br>
+              <strong>Time:</strong>
+              {{ booking.time }}<br>
+              <strong>Number of Guests:</strong>
+              {{ booking.guests }}<br>
+              <strong>Additional Comment:</strong>
+              {{ booking.comment }}<br>
+              <ul><a href="{% url 'details' booking.pk %}">
+                Click for Details
+              </ul></a>
+            </p>
+          </div>
+        </div>
     <br>
-    {% endfor %}
 
+
+    {% endif %}
+
+    {% endfor %}
   {% else %}
 
-    You do not have any reservations yet! 
+  You do not have any reservations yet!
   <br>
   <br>
-
   {% endif %}
 
-  {% endblock %}
+{% endblock %}
