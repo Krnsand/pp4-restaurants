@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 from django.utils import timezone
 from django.db.models import IntegerField, Model
+from django.urls import reverse
 import datetime as dt
 
 
@@ -57,8 +58,11 @@ class Booking(models.Model):
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
 
+    def get_absolute_url(self):
+        return reverse('bookings')
+
     class Meta:
-            ordering = ['date']
+        ordering = ['date']
 
     def __str__(self):
         return "Booking for {guests} guests at {restaurant} on {date} at {time}".format(
@@ -67,13 +71,3 @@ class Booking(models.Model):
             date=self.date,
             time=self.time,
         )
-
-
-# class User(models.Model):
-#     first_name = models.CharField(max_length=30)
-#    last_name = models.CharField(max_length=30)
-#    email = models.EmailField(max_length=100, unique=True)
-#    booking = models.ForeignKey(Booking, on_delete=models.CASCADE)
-
-#    def __str__(self):
-#        return self.first_name + ' ' + self.last_name
