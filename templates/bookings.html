@@ -12,7 +12,8 @@
   <h1>My Reservations</h1>
   <br>
 
-  <ul>
+  {% if user.is_authenticated %}
+
     {% for booking in booking_list %}
 
     <div class="card">
@@ -35,8 +36,15 @@
         </p>
       </div>
     </div>
-  <br>
-  <br>
+    <br>
     {% endfor %}
+
+  {% else %}
+
+    You do not have any reservations yet! 
+  <br>
+  <br>
+
+  {% endif %}
 
   {% endblock %}
