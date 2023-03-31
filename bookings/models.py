@@ -57,8 +57,8 @@ class Booking(models.Model):
     guests = models.IntegerField(choices=GUEST_CHOICES, blank=True, null=True)
     comment = models.TextField(max_length=200, default="", blank=True)
 
-    #    class Meta:
-    #        ordering = ['date']
+    class Meta:
+            ordering = ['date']
 
     def __str__(self):
         return "Booking for {guests} guests at {restaurant} on {date} at {time}".format(
