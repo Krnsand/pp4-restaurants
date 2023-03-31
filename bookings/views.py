@@ -1,12 +1,18 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.http import HttpResponseRedirect, HttpResponse
-from django.urls import reverse
+from django.urls import reverse, reverse_lazy
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from django.views.generic import View, ListView, DetailView
 from .models import Booking
 from .forms import RestaurantForm
+from django.views.generic import (
+    View,
+    ListView,
+    DetailView,
+    UpdateView,
+    DeleteView
+)
 
 
 class HomePage(View):
@@ -17,12 +23,12 @@ class HomePage(View):
 def add_reservation(request):
     submitted = False
     if request.method == "POST":
-        user = request.user
         form = RestaurantForm(request.POST)
         if form.is_valid():
-            form.save()
+            user = form.save(commit=False)
+            user.user = request.user
+            user.save()
             return HttpResponseRedirect("/add_reservation?submitted=True")
-
     else:
         form = RestaurantForm
         if "submitted" in request.GET:
@@ -35,6 +41,7 @@ def add_reservation(request):
 @method_decorator(login_required, name='dispatch')
 class BookingList(generic.ListView):
     model = Booking
+    form_class = RestaurantForm
     queryset = Booking.objects.all().order_by('date')
     template_name = "bookings.html"
     context_object_name = "booking_list"
@@ -74,3 +81,20 @@ class OrangeCushion(View):
         Get method, renders orange_cushion.html.
         """
         return render(request, "orange_cushion.html")
+
+
+class BookingDetail(DetailView):
+    model = Booking
+    template_name = 'booking_details.html'
+
+
+class UpdateBooking(UpdateView):
+    model = Booking
+    template_name = 'update_booking.html'
+    fields = ['date', 'time', 'guests', 'comment']
+
+
+class DeleteBooking(DeleteView):
+    model = Booking
+    template_name = 'delete_booking.html'
+    success_url = reverse_lazy('bookings')
