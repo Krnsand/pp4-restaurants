@@ -6,6 +6,9 @@ from .views import (
     VioletFusion,
     GreenDining,
     OrangeCushion,
+    BookingDetail,
+    UpdateBooking,
+    DeleteBooking,
 )
 
 urlpatterns = [
@@ -16,4 +19,7 @@ urlpatterns = [
     path("violet_fusion", views.VioletFusion.as_view(), name="violet"),
     path("green_dining", views.GreenDining.as_view(), name="green"),
     path("orange_cushion", views.OrangeCushion.as_view(), name="orange"),
+    path("bookings/<int:pk>", views.BookingDetail.as_view(), name="details"),
+    path("bookings/edit/<int:pk>", views.UpdateBooking.as_view(), name="update-booking"),
+    path("bookings/edit/<int:pk>/remove", views.DeleteBooking.as_view(), name="delete-booking"),
 ]
