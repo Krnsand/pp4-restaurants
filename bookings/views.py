@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.views import generic
 from django.http import HttpResponseRedirect, HttpResponse
 from django.urls import reverse, reverse_lazy
+from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
 from .models import Booking
@@ -28,7 +29,7 @@ def add_reservation(request):
             user = form.save(commit=False)
             user.user = request.user
             user.save()
-            return HttpResponseRedirect("/bookings")
+            return HttpResponseRedirect("/add_reservation?submitted=True")
     else:
         form = RestaurantForm
         if "submitted" in request.GET:
@@ -89,12 +90,17 @@ class BookingDetail(DetailView):
 
 
 class UpdateBooking(UpdateView):
-    model = Booking
-    template_name = 'update_booking.html'
-    fields = ['date', 'time', 'guests', 'comment']
+        model = Booking
+        template_name = 'update_booking.html'
+        fields = ['date', 'time', 'guests', 'comment']
 
 
 class DeleteBooking(DeleteView):
     model = Booking
     template_name = 'delete_booking.html'
     success_url = reverse_lazy('bookings')
+
+
+class Error(View):
+    def get(self, request):
+        return render(request, "404.html")
