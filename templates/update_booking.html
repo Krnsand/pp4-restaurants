@@ -16,8 +16,9 @@
     <form method="post" class="my-class">
         {% csrf_token %}
         {{ form.as_p }}
-   <button class="btn btn-success">Update</button>
+        <button class="btn btn-success">Update</button>
     </form>
+    
     <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
 
     {% else %}
