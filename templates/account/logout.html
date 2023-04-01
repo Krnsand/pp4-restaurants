@@ -20,11 +20,13 @@
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
     </p>
-    <button class="btn btn-signup right btn-outline-dark" type="submit">{% trans 'Sign Out' %}</button>
   </div>
-  
+  <div class="card-footer text-body-secondary">
+    <button class="btn btn-signup right btn-outline-dark" type="submit">{% trans 'Sign Out' %}</button>
 </div>
-
+</div>
+<br><br><br>
+<!--
 <div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
@@ -47,4 +49,5 @@
     </div>
   </div>
 </div>
+-->
 {% endblock %}

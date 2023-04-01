@@ -8,6 +8,33 @@
 {% block content %}
 <br><br><br><br><br>
 
+<div class="card text-center">
+  <div class="card-header">
+    <h3>{% trans "Sign In" %}</h3>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">
+    </h5>
+    <p class="card-text">
+      <p>{% blocktrans %}Welcome back to Vivid Fusion. To book a table at one of our restaurants, please log in. If you
+        have not created an account yet, then please <a class="link" href="{{ signup_url }}">sign up</a>
+        first.{% endblocktrans %}
+
+        <form class="login" method="POST" action="{% url 'account_login' %}">
+          {% csrf_token %}
+          {{ form.as_p }}
+          {% if redirect_field_value %}
+          <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+          {% endif %}
+      </p>
+  </div>
+  <div class="card-footer text-body-secondary">
+    <button class="btn btn-signup right btn-outline-success" type="submit">{% trans "Sign In" %}</button>
+  </div>
+</div>
+
+<!--
+
 <div class="container">
   <div class="row">
     <div class="col-md-8 mt-3 offset-md-2">
@@ -31,4 +58,5 @@
     </div>
   </div>
 </div>
+-->
 {% endblock %}
