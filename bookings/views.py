@@ -28,7 +28,7 @@ def add_reservation(request):
             user = form.save(commit=False)
             user.user = request.user
             user.save()
-            return HttpResponseRedirect("/add_reservation?submitted=True")
+            return HttpResponseRedirect("/bookings")
     else:
         form = RestaurantForm
         if "submitted" in request.GET:
