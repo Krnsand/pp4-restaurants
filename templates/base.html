@@ -8,6 +8,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Favicon -->
+    <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+
     <!-- Fonts -->
     <link
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
@@ -54,7 +57,7 @@
                     </li>
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'signup' %}">Register</a>
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
@@ -193,7 +196,7 @@
         <!-- End Why Us Section -->
 
         <!-- ======= Gallery Section ======= -->
-        <section id="gallery" class="gallery">
+        <section id="gallery" class="gallery section-bg">
 
             <div class="container" data-aos="fade-up">
                 <div class="section-title">
@@ -281,9 +284,10 @@
                 </div>
 
             </div>
+            <br><br><br>
         </section><!-- End Gallery Section -->
 
-        <!-- ======= Contact Section ======= -->
+        <!-- ======= Contact Section =======  
         <section id="contact" class="contact">
             <div class="container" data-aos="fade-up">
 
@@ -292,13 +296,6 @@
                     <p>Contact Us</p>
                 </div>
             </div>
-
-            <div data-aos="fade-up">
-                <iframe style="border:0; width: 100%; height: 350px;"
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
-                    frameborder="0" allowfullscreen></iframe>
-            </div>
-
             <div class="container" data-aos="fade-up">
 
                 <div class="row mt-5">
@@ -306,7 +303,7 @@
                     <div class="col-lg-4">
                         <div class="info">
                             <div class="address">
-                                <i class="fa-light fa-globe"></i>
+                                <i class="fa-thin fa-location-dot"></i>
                                 <h4>Location:</h4>
                                 <p>A108 Adam Street, New York, NY 535022</p>
                             </div>
@@ -340,11 +337,11 @@
 
             </div>
         </section>
-        <!-- End Contact Section -->
+        <!-- End Contact Section 
 
-    </main><!-- End #main -->
+    </main><!-- End #main 
 
-    <!-- ======= Footer ======= -->
+     ======= Footer ======= 
     <footer id="footer">
         <div class="footer-top">
             <div class="container">
@@ -353,17 +350,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info">
                             <h3>Vivid Fusion</h3>
-                            <p>
-                                A108 Adam Street <br>
-                                NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
-                            </p>
+                             
                             <div class="social-links mt-3">
-                                <a href="#" class="github"><i class="bx bxl-twitter"></i></a>
-                                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                                <a href="#" class="github"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" class="facebook"><i class="fa-brands fa-facebook"></i></a>
+                                <a href="#" class="instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" class="linkedin"><i class="fa-brands fa-linkedin"></i></a>
                             </div>
                         </div>
                     </div>
@@ -382,10 +374,77 @@
                 </div>
             </div>
         </div>
-    </footer><!-- End Footer -->
+    </footer> End Footer -->
+
+    <footer>
+        <br><br>
+    <div class="container" data-aos="fade-up">
+        <div class="section-title">
+            <h2>Contact</h2>
+            <p>Contact Us</p>
+        </div>
+
+        <div class="contact-info">
+        <div class="address">
+            <i class="fa-solid fa-location-pin"></i>
+            <h4>Location:</h4>
+            <p>A108 Adam Street, New York, NY 535022</p>
+        </div>
+
+        <div class="open-hours">
+            <i class="fa-regular fa-clock"></i>
+            <h4>Open Hours:</h4>
+            <p>
+                Monday-Saturday:<br>
+                11:00 AM - 2300 PM
+            </p>
+        </div>
+
+        <div class="email">
+            <i class="fa-regular fa-envelope"></i>
+            <h4>Email:</h4>
+            <p>info@example.com</p>
+        </div>
+
+        <div class="phone">
+            <i class="fa-solid fa-phone"></i>
+            <h4>Call:</h4>
+            <p>+1 5589 55488 55s</p>
+        </div>
+
+    </div>
+    <br>
+        <hr>
+        <ul class="social-networks">
+            <li>
+                <a href="https://facebook.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Facebook page (opens in a new tab)"><i
+                        class="fa-brands fa-facebook facebook"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/Krnsand" target="_blank" rel="noopener"
+                    aria-label="Visit our Github page (opens in a new tab)"><i
+                        class="fa-brands fa-github github"></i></a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/karin-sandin-498073200/" target="_blank" rel="noopener"
+                    aria-label="Visit my linkedin page (opens in a new tab)"><i
+                        class="fa-brands fa-linkedin linkedin"></i></a>
+            </li>
+            <li>
+                <a href="https://instagram.com" target="_blank" rel="noopener"
+                    aria-label="Visit our Instagram page (opens in a new tab)"><i
+                        class="fa-brands fa-instagram instagram"></i></a>
+            </li>
+        </ul>
+    </footer>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="fa-solid fa-chevron-up"></i></a>
+
+
+    <!-- font awesome script -->
+    <script src="https://kit.fontawesome.com/fa6067118b.js" crossorigin="anonymous"></script>
 
     <!-- Vendor JS Files -->
     <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
