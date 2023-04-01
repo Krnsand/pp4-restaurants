@@ -3,47 +3,69 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-    {% if user.id == booking.user.id %}
+{% if user.id == booking.user.id %}
 
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-    <br><br><br><br>
+<section id="book-a-table" class="update-booking">
+    <div class="container" data-aos="fade-up">
+        <br><br><br><br>
 
-    <h2>Update your Reservation</h2>
-    
-    <br>
+        <div class="card text-center">
+            <div class="card-header">
+                <h2>Update your Reservation</h2>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text">
 
-    <form method="post" class="my-class">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-success">Update</button>
-    </form>
-    
-    <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
-
-    {% else %}
-    
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-            <br><br><br><br>
-            <h2>Please register/login to handle reservations</h2>
-            <br>
+                    <form method="post" class="my-class">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        <button class="btn btn-success">Update</button>
+                    </form>
+                </p>
+            </div>
+            <div class="card-footer text-body-secondary">
+                <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
+            </div>
         </div>
-    </section>
 
-    {% endif %}
-{% else %}
-    
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-            <br><br><br><br>
-            <h2>Please register/login to handle reservations</h2>
-            <br>
-        </div>
-    </section>
+        <br><br><br>
+<!--
+        <h2>Update your Reservation</h2>
 
-{% endif %}
-    
+        <br>
+
+        <form method="post" class="my-class">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success">Update</button>
+        </form>
+
+        <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
+
+        {% else %}
+
+        <section id="book-a-table" class="book-a-table">
+            <div class="container" data-aos="fade-up">
+                <br><br><br><br>
+                <h2>Please register/login to handle reservations</h2>
+                <br>
+            </div>
+        </section>
+
+        {% endif %}
+        {% else %}
+
+        <section id="book-a-table" class="book-a-table">
+            <div class="container" data-aos="fade-up">
+                <br><br><br><br>
+                <h2>Please register/login to handle reservations</h2>
+                <br>
+            </div>
+        </section>
+
+        {% endif %}
+-->
 
 
-{% endblock %}
+        {% endblock %}
