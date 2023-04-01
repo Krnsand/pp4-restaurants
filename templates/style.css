@@ -298,7 +298,8 @@ h6 {
 
 /**
 * Mobile Navigation 
-*/
+**/
+
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -401,6 +402,7 @@ h6 {
 .navbar-mobile .dropdown>.dropdown-active {
   display: block;
 }
+
 
 /*--------------------------------------------------------------
 # Hero Section
