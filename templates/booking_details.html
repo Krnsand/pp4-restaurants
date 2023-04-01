@@ -3,6 +3,29 @@
 {% block content %}
 <br><br><br><br><br><br>
 
+<div class="card text-center">
+    <div class="card-header">
+        <br>
+    </div>
+    <div class="card-body">
+      <h2 class="card-title">{{ booking.restaurant.name }}</h2>
+      <p class="card-text">
+        <strong>Date:</strong>
+        {{ booking.date }}<br>
+        <strong>Time:</strong>
+        {{ booking.time }}<br>
+        <strong>Number of Guests:</strong>
+        {{ booking.guests }}<br>
+        <strong>Additional Comment:</strong>
+        {{ booking.comment }}<br></p>
+      <a href="{% url 'update-booking' booking.pk %}" class="btn btn-outline-success">Edit</a>
+      <a href="{% url 'delete-booking' booking.pk %}" class="btn btn-outline-warning">Delete</a> 
+      <br>
+      <hr>
+      <a href="{% url 'bookings' %}" class="btn btn-success">Back</a>
+      </div>
+      
+  </div>
 
 <h1>{{ booking.restaurant.name }}</h1>
 <strong>Date:</strong>
