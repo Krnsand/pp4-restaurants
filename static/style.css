@@ -15,12 +15,12 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #051b02;
+  background: #000000;
   color: #fff;
 }
 
 a {
-  color: #f39200;
+  color: #cdb18d;
   text-decoration: none;
 }
 
@@ -373,7 +373,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("assets/img/my-img/pexels-pranav-jain-1707957.jpg") top center;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371094/static/assets/img/my-img/pexels-pranav-jain-1707957.2e4ca52d1155.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -406,6 +406,7 @@ h6 {
   line-height: 56px;
   color: #fff;
   font-family: "Poppins", sans-serif;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
 }
 
 #hero h1 span {
@@ -416,6 +417,7 @@ h6 {
   color: #eee;
   margin-bottom: 10px 0 0 0;
   font-size: 22px;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
 }
 
 #hero .btns {
@@ -599,7 +601,7 @@ section {
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../static/assets/img/my-img/about.jpg") center center;
+  background: url(https://res.cloudinary.com/djdc4rve5/image/upload/v1680371098/static/assets/img/my-img/about.f6658590da58.jpg);
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -703,14 +705,14 @@ section {
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
-  background: #48433a;
+  background: rgb(158,165,144, 0.2);
 }
 
 .restaurants .box span {
   display: block;
   font-size: 28px;
   font-weight: 700;
-  color: #cda45e;
+  color: #8d7203;
 }
 
 .restaurants .box h4 {
@@ -729,7 +731,7 @@ section {
 }
 
 .restaurants .box:hover {
-  background: #cda45e;
+  background:#9ea590;
   padding: 30px 30px 70px 30px;
   box-shadow: 10px 15px 30px rgba(0, 0, 0, 0.18);
 }
@@ -743,10 +745,17 @@ section {
 /*--------------------------------------------------------------
 # Violet Fusion
 --------------------------------------------------------------*/
-.card 
+.card {
+  display: flex;
+  justify-content: center;
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-
-.text-bg-dark {
+.booking-card {
+  display: flex;
+  flex-direction: column;
 }
 
 /*--------------------------------------------------------------
@@ -869,6 +878,41 @@ section {
 
 .book-a-table .php-email-form button[type=submit]:hover {
   background: #d3af71;
+}
+
+/*------------
+# Book table
+--------------*/
+
+.book-table .card {
+  background-color: rgb(255 255 255 / 51%);
+  padding: 0 10px;
+}
+
+
+
+
+/*------------
+# Reservation Made
+--------------*/
+.reservation-made {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  padding: 80px 0;
+  margin-top: 10rem;
+
+}
+
+.reservation-made:before {
+  content: "";
+  background: rgba(175, 173, 173, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -1257,4 +1301,10 @@ footer {
     text-decoration: none;
 
   }
+}
+
+.card-img-top {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }

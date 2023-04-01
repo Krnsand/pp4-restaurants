@@ -11,27 +11,26 @@
 
     {% for booking in booking_list %}
 
-    {% if user.id == booking.user.id %}
+        {% if user.id == booking.user.id %}
 
-    <div class="card">
-      <h5 class="card-header">{{ booking.restaurant.name }}</h5>
-      <div class="card-body">
-        <h5 class="card-title">{{ booking.date }}</h5>
-        <p class="card-text"></p>
-        <a href="{% url 'details' booking.pk %}" class="btn btn-outline-success">Click for Details</a>
-      </div>
-    </div>
-    <br>
-
-
-    {% endif %}
+        <div class="card booking-card">
+          <h5 class="card-header">{{ booking.restaurant.name }}</h5>
+          <div class="card-body">
+            <h5 class="card-title">{{ booking.date }}</h5>
+            <p class="card-text"></p>
+            <a href="{% url 'details' booking.pk %}" class="btn btn-outline-success">Click for Details</a>
+          </div>
+        </div>
+        <br>
+        {% endif %}
 
     {% endfor %}
-  {% else %}
 
-  You do not have any reservations yet!
-  <br>
-  <br>
-  {% endif %}
+{% else %}
+
+You don't have any reservations yet!
+<br>
+<br>
+{% endif %}
 
 {% endblock %}

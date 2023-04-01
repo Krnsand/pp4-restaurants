@@ -4,6 +4,13 @@
 
 {% if user.is_authenticated %}
 {% if user.id == booking.user.id %}
+    {% if submitted %}
+        <div class="container booking-updated">
+            
+            <h4>Your reservation has been Updated!</h4>
+            
+        </div>
+    {% else %}
 
 <section id="book-a-table" class="update-booking">
     <div class="container" data-aos="fade-up">
@@ -28,44 +35,24 @@
                 <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
             </div>
         </div>
+    </div>
+</section>
+    {% endif %}
 
-        <br><br><br>
-<!--
-        <h2>Update your Reservation</h2>
+{% else %}
 
+<section id="book-a-table" class="book-a-table">
+    <div class="container" data-aos="fade-up">
+        <br><br><br><br>
+        <h2>Please register/login to handle reservations</h2>
         <br>
+    </div>
+</section>
 
-        <form method="post" class="my-class">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-success">Update</button>
-        </form>
+{% endif %}
+{% endif %}
 
-        <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
+<br><br><br>
 
-        {% else %}
+{% endblock %}
 
-        <section id="book-a-table" class="book-a-table">
-            <div class="container" data-aos="fade-up">
-                <br><br><br><br>
-                <h2>Please register/login to handle reservations</h2>
-                <br>
-            </div>
-        </section>
-
-        {% endif %}
-        {% else %}
-
-        <section id="book-a-table" class="book-a-table">
-            <div class="container" data-aos="fade-up">
-                <br><br><br><br>
-                <h2>Please register/login to handle reservations</h2>
-                <br>
-            </div>
-        </section>
-
-        {% endif %}
--->
-
-
-        {% endblock %}

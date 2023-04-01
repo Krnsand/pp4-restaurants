@@ -38,6 +38,11 @@
     {% endif %} -->
 
 {% if user.is_authenticated %}
+            {% if submitted %}
+        <div class="container reservation-made">
+            <h4>Your reservation is now made. We look forward to seeing you!</h4>
+        </div>
+            {% else %}
 
 <section id="book-a-table" class="book-table">
     <div class="container" data-aos="fade-up">
@@ -50,21 +55,24 @@
             <div class="card-body">
                 <h5 class="card-title"></h5>
                 <p class="card-text">
-                    <div class="form-group">
+                    
                         {{ form.media }}
-                        <form action="" method="POST" class="form-group">
+                        <form action="" method="POST" class="form-group reservation">
                             {% csrf_token %}
                             {{ form.as_p }}
-                            <input type="submit" value="Submit" class="btn btn-success"><a
+                            <input type="submit" value="Submit" class="btn btn-outline-success"><a
                                 href="{% url 'bookings' %}"></a>
-                            <a href="{% url 'bookings' %}" class="btn btn-outline-success">Submit</a>
-                </p>
-                <div class="card-footer text-body-secondary">
-                    <input type="submit" value="Submit" class="btn btn-success"><a href="{% url 'bookings' %}"></a>
-                </div>
+                        
+                </p> 
             </div>
+        </div>
+        <br>
+    </div>
+</section>
 
-            <br><br><br>
+{% endif %}
+
+            <br><br>
             {% endif %}
 
             {% endblock %}
