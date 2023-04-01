@@ -27,26 +27,6 @@
       
   </div>
 
-<h1>{{ booking.restaurant.name }}</h1>
-<strong>Date:</strong>
-{{ booking.date }}<br>
-<strong>Time:</strong>
-{{ booking.time }}<br>
-<strong>Number of Guests:</strong>
-{{ booking.guests }}<br>
-<strong>Additional Comment:</strong>
-{{ booking.comment }}<br>
-
-<br>
-<hr>
-<a href="{% url 'update-booking' booking.pk %}">[Edit]</a>
-<a href="{% url 'delete-booking' booking.pk %}">[Delete]</a>
-
-<br>
-<hr>
-
-<a href="{% url 'bookings' %}" class="btn btn-success">Back</a>
-
 <br><br>
 
 {% endblock %}
