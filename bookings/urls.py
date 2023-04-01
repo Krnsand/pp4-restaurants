@@ -13,7 +13,6 @@ from .views import (
 
 urlpatterns = [
     path("", views.HomePage.as_view(), name="home"),
-    # path("restaurants", views.HomePage.as_view(), name="restaurants"),
     path("bookings", views.BookingList.as_view(), name="bookings"),
     path("add_reservation", views.add_reservation, name="add-reservation"),
     path("violet_fusion", views.VioletFusion.as_view(), name="violet"),

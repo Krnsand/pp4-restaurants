@@ -51,7 +51,6 @@ INSTALLED_APPS = [
     'crispy_bootstrap4',
     'bootstrap_datepicker_plus',
     'bookings',
-    'users',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -59,8 +58,8 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 

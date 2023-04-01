@@ -39,6 +39,15 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
+}
+
+/*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
 .back-to-top {
@@ -495,7 +504,7 @@ section {
 }
 
 .section-bg {
-  background-color: #1a1814;
+  background-color: #051503;
 }
 
 .section-title {
@@ -535,7 +544,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
-.breadcrumbs {
+/*.breadcrumbs {
   padding: 15px 0;
   background: #1d1b16;
   margin-top: 110px;
@@ -585,12 +594,12 @@ section {
     display: inline-block;
   }
 }
-
+-*/
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
 .about {
-  background: url("../static/img/pexels-lisa-fotios-1126728.jpg") center center;
+  background: url("../static/assets/img/my-img/about.jpg") center center;
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -598,7 +607,7 @@ section {
 
 .about:before {
   content: "";
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   position: absolute;
   bottom: 0;
   top: 0;
@@ -608,7 +617,7 @@ section {
 
 .about .about-img {
   position: relative;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .about .about-img img {
@@ -631,12 +640,12 @@ section {
 }
 
 .about .about-img::after {
-  position: relative;
+  position: absolute;
   right: 20px;
   bottom: 20px;
   width: 60px;
   height: 60px;
-  z-index: 2;
+  z-index: 1;
   content: "";
   border-right: 5px solid #cda45e;
   border-bottom: 5px solid #cda45e;
@@ -694,7 +703,7 @@ section {
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
-  background: #1a1814;
+  background: #48433a;
 }
 
 .restaurants .box span {
@@ -743,23 +752,12 @@ section {
 /*--------------------------------------------------------------
 # Book A Table
 --------------------------------------------------------------*/
-/*-.book-a-table {
-  width: 100%;
-  background: url("assets/img/my-img/booking-background.jpg") center center;
+
+.book-a-table {
+  background: url("../static/assets/img/my-img/booking-background.jpg") center center;
   background-size: cover;
   position: relative;
   padding: 80px 0;
-  margin-left: auto;
-  margin-right: auto;
-}
---*/
-
-.book-a-table {
-  width: 100%;
-  background: url("assets/img/my-img/booking-background.jpg");
-  background-size: cover;
-  background-position: center;
-  padding: 8rem;
 }
 
 .form-group {
@@ -892,7 +890,7 @@ section {
 
 /*--------------------------------------------------------------
 # Contact
---------------------------------------------------------------*/
+--------------------------------------------------------------
 .contact .info {
   width: 100%;
 }
@@ -1038,10 +1036,11 @@ section {
     transform: rotate(360deg);
   }
 }
+*/
 
 /*--------------------------------------------------------------
 # Footer
---------------------------------------------------------------*/
+
 #footer {
   background: black;
   padding: 0 0 30px 0;
@@ -1191,4 +1190,71 @@ section {
   text-align: center;
   font-size: 13px;
   color: #fff;
+}
+--------------------------------------------------------------*/
+/* footer */
+
+footer {
+  height: 10rem;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-networks {
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.social-networks>li {
+  display: inline;
+}
+
+.social-networks i {
+  font-size: 160%;
+  margin: 1%;
+  padding: 2%;
+  color: #888585;
+}
+
+.social-networks i:hover {
+  transform: scale(1.5);
+}
+
+/* the hover code below is copied from Geeks for Geeks, link in README.md */
+
+.youtube:hover {
+  color: red;
+}
+
+.facebook:hover {
+  color: blue;
+}
+
+.instagram:hover {
+  color: #e11d74;
+}
+
+.github:hover {
+  color: black;
+}
+
+.linkedin:hover {
+  color: #04009a;
+}
+
+@media (min-width: 380px) {
+  footer {
+      max-height: 30%;
+
+  }
+
+  .contact-info ul {
+    flex-direction: column;
+    text-decoration: none;
+
+  }
 }
