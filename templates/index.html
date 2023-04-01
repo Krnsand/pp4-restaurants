@@ -30,6 +30,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <!--<link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/scss' %}">-->
 
     <title>Vivid Fushion</title>
 </head>
@@ -59,11 +60,9 @@
                         <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                     </li>
                     {% endif %}
-                    <i class="bi bi-list mobile-nav-toggle"></i>
             </nav><!-- .navbar -->
             <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
             </ul>
-            </nav>
     </header>
 
     <!-- Main Content -->
