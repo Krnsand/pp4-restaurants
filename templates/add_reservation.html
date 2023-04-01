@@ -13,7 +13,7 @@
             <br>
             <div class="form-group">
                 {{ form.media }}
-                <form action="" method="POST" class="my-class">
+                <form action="" method="POST" class="form-group">
                     {% csrf_token %}
                     {{ form | crispy }}
                     <input type="submit" value="Submit" class="btn btn-success">
