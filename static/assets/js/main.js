@@ -116,12 +116,22 @@
 
   /**
    * Mobile nav toggle
-   */
+   
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
+*/
+
+  function classToggle() {
+    const navs = document.querySelectorAll('.Navbar__Items')
+    
+    navs.forEach(nav => nav.classList.toggle('Navbar__ToggleShow'));
+  }
+  
+  document.querySelector('.Navbar__Link-toggle')
+    .addEventListener('click', classToggle);
 
   /**
    * Mobile nav dropdowns activate

@@ -1,5 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
 
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="{% static 'style.css' %}">
+
+<div class="Navbar">
+  <div class="Navbar__Link Navbar__Link-brand">
+    Vivid Fushion
+   </div>
+   <div class="Navbar__Link Navbar__Link-toggle">
+     <i class="fas fa-bars"></i>
+   </div>
+ <nav class="Navbar__Items">
+   <div class="Navbar__Link">
+    <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+   </div>
+   <div class="Navbar__Link">
+    <li><a class="nav-link scrollto" href="{% url 'home' %}">Restaurants</a></li>
+   </div>
+   {% if user.is_authenticated %}
+   <div class="Navbar__Link">
+    <li class="nav-item">
+      <a class="nav-link active" href="{% url 'bookings' %}">My Bookings</a>
+  </li>
+   </div>
+   <div class="Navbar__Link">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+  </li>
+  </div>
+  {% else %}
+  <div class="Navbar__Link">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+  </li>
+  </div>
+  <div class="Navbar__Link">
+    <li class="nav-item">
+      <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+  </li>
+  </div>
+  {% endif %}
+ </nav>
+ <nav class="Navbar__Items Navbar__Items--right">
+   <div class="Navbar__Link">
+    <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+   </div>
+ </nav>
+</div>
+<!--
+
+  <header id="header" class="fixed-top d-flex align-items-cente">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
+
+            <h1 class="logo me-auto me-lg-0"><a href="#">Vivid Fushion</a></h1>
+            <nav id="navbar" class="navbar order-last order-lg-0">
+                <ul>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
+                    <li><a class="nav-link scrollto" href="{% url 'home' %}">Restaurants</a></li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'bookings' %}">My Bookings</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'account_login' %}">Login</a>
+                    </li>
+                    {% endif %}
+            </nav><!-- .navbar
+            <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+            </ul>
+    </header>
 <div class="container"></div>
     <div class="card mb-5">
         <img src="../static/assets/img/my-img/404.png" class="card-img-top" alt="...">
@@ -9,3 +99,7 @@
           <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
         </div>    
         <a href="{% url 'home' %}" class="btn btn-success">Back</a>
+-->
+</body>
+<script src="{% static 'assets/js/main.js' %}"></script>
+</html>

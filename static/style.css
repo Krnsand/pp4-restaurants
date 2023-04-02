@@ -153,7 +153,7 @@ h6 {
 --------------------------------------------------------------*/
 /**
 * Desktop Navigation 
-*/
+
 .navbar {
   padding: 0;
 }
@@ -259,11 +259,11 @@ h6 {
     left: -100%;
   }
 }
-
+*/
 
 /**
 * Mobile Navigation 
-*/
+
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -367,13 +367,65 @@ h6 {
   display: block;
 }
 
+-*/
+
+.Navbar {
+  background-color: #46ACC2;
+  display: flex;
+  padding: 16px;
+  font-family: sans-serif;
+  color: white;
+}
+
+.Navbar__Link {
+  padding-right: 8px;
+}
+
+.Navbar__Items {
+  display: flex;
+}
+
+.Navbar__Items--right {
+  margin-left:auto;
+}
+
+.Navbar__Link-toggle {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .Navbar__Items,
+  .Navbar {
+    flex-direction: column;
+  }
+    
+.Navbar__Items {
+    display:none;
+  }
+    
+.Navbar__Items--right {
+    margin-left:0;
+  }
+    
+.Navbar__ToggleShow {
+    display: flex;
+  }
+    
+.Navbar__Link-toggle {
+    align-self: flex-end;
+    display: initial;
+    position: absolute;
+    cursor: pointer;
+   } 
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371094/static/assets/img/my-img/pexels-pranav-jain-1707957.2e4ca52d1155.jpg") top center;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680420787/static/assets/img/my-img/welcome.2e4ca52d1155.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -885,7 +937,7 @@ section {
 --------------*/
 
 .book-table .card {
-  background-color: rgb(255 255 255 / 51%);
+  background-color: rgba(188, 255, 196, 0.51);
   padding: 0 10px;
 }
 
