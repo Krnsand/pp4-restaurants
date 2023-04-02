@@ -2,53 +2,18 @@
 
 {% block content %}
 
-<!--    {% if user.is_authenticated %}
-
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-            <br><br><br>
-            <h2>Make a Reservation at One of Our Restaurants!</h2>
-            <br>
-            <div class="form-group">
-               {{ form.media }}
-                <form action="" method="POST" class="form-group">
-                    {% csrf_token %}
-                    {{ form.as_p }}
-                    <input type="submit" value="Submit" class="btn btn-success">
-                </form>
-            </div>
-        </div>
-
-            {% if submitted %}
-
-            <h4>Your reservation is now made. We look forward to seeing you!</h4>
-
-            {% endif %}
-        </section>
-
-    {% else %}
-
-    <section id="book-a-table" class="book-a-table">
-        <div class="container" data-aos="fade-up">
-            <br><br><br><br>
-            <h2>Please register/login to make a reservation</h2>
-            <br>
-    </section>
-
-    {% endif %} -->
-
 {% if user.is_authenticated %}
             {% if submitted %}
-        <div class="container reservation-made">
+        <div class="reservation-made text-center">
             <h4>Your reservation is now made. We look forward to seeing you!</h4>
         </div>
             {% else %}
 
 <section id="book-a-table" class="book-table">
     <div class="container" data-aos="fade-up">
-        <br><br><br><br>
+        <br><br>
 
-        <div class="card text-center">
+        <div class="card text-center make-reservation">
             <div class="card-header">
                 <h2>Make a Reservation at One of Our Restaurants!</h2>
             </div>
