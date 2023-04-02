@@ -384,6 +384,20 @@ h6 {
   display: block;
 }
 
+@media (max-width: 991px) {
+  #header > .container-fluid {
+    flex-direction: column;
+  }
+  #header .logo {
+    margin: 0 auto;
+  }
+  .navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
@@ -762,42 +776,6 @@ section {
   color: #fff;
 }
 
-/*--------------------------------------------------------------
-# Green Dining
--------------------------------------------------------*/
-#green {
-  width: 100%;
-  height: 100vh;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371091/static/assets/img/my-img/green-hero.db66e59d97e3.jpg") top center;
-  background-size: cover;
-  position: relative;
-  padding: 0;
-  border-radius: .5rem;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#green h1 {
-  margin: 0;
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #fff;
-  font-family: "Poppins", sans-serif;
-  text-shadow: rgb(3, 46, 27) 1px 0 10px;
-}
-
-#green h1 span {
-  color: #cda45e;
-}
-
-#green h2 {
-  color: #eee;
-  margin-bottom: 10px 0 0 0;
-  font-size: 22px;
-  text-shadow: rgb(3, 46, 27) 1px 0 10px;
-}
-
-
 /*-------------------------
 # Vivid Fusion Cards
 -------------------------*/
@@ -995,6 +973,349 @@ section {
   border-radius: 2rem;
 }
 
+/*--------------------------------------------------------------
+# Violet Fusion
+-------------------------------------------------------*/
+
+#violet {
+  width: 100%;
+  height: 100vh;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457995/static/assets/img/my-img/violet-hero.601c9e448eca.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#violet h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
+}
+
+#violet h1 span {
+  color: #cda45e;
+}
+
+#violet h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
+}
+
+.violet-about {
+  background: url(https://res.cloudinary.com/djdc4rve5/image/upload/v1680457982/static/assets/img/my-img/violet-background.395c6edd7859.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+}
+
+.violet-about:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.violet-about .violet-about-img {
+  position: relative;
+  transition: 0.3s;
+}
+
+.violet-about .violet-about-img img {
+  max-width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.violet-about .violet-about-img::before {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-left: 5px solid #cda45e;
+  border-top: 5px solid #cda45e;
+  transition: 0.5s;
+}
+
+.violet-about .violet-about-img::after {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-right: 5px solid #cda45e;
+  border-bottom: 5px solid #cda45e;
+  transition: 0.5s;
+}
+
+.violet-about .about-img:hover {
+  transform: scale(1.03);
+}
+
+.violet-about .violet-about-img:hover::before {
+  left: 10px;
+  top: 10px;
+}
+
+.violet-about .violet-about-img:hover::after {
+  right: 10px;
+  bottom: 10px;
+}
+
+.violet-about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+@media (min-width: 1024px) {
+  .violet-about {
+    background-attachment: fixed;
+  }
+}
+
+/*--------------------------------------------------------------
+# Green Dining
+-------------------------------------------------------*/
+#green {
+  width: 100%;
+  height: 100vh;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371091/static/assets/img/my-img/green-hero.db66e59d97e3.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#green h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
+}
+
+#green h1 span {
+  color: #cda45e;
+}
+
+#green h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
+}
+
+.about {
+  background: url(https://res.cloudinary.com/djdc4rve5/image/upload/v1680371098/static/assets/img/my-img/about.f6658590da58.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+}
+
+.about:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about .about-img {
+  position: relative;
+  transition: 0.3s;
+}
+
+.about .about-img img {
+  max-width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.about .about-img::before {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-left: 5px solid #cda45e;
+  border-top: 5px solid #cda45e;
+  transition: 0.5s;
+}
+
+.about .about-img::after {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-right: 5px solid #cda45e;
+  border-bottom: 5px solid #cda45e;
+  transition: 0.5s;
+}
+
+.about .about-img:hover {
+  transform: scale(1.03);
+}
+
+.about .about-img:hover::before {
+  left: 10px;
+  top: 10px;
+}
+
+.about .about-img:hover::after {
+  right: 10px;
+  bottom: 10px;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+@media (min-width: 1024px) {
+  .about {
+    background-attachment: fixed;
+  }
+}
+
+/*--------------------------------------------------------------
+# Orange Cushion
+-------------------------------------------------------*/
+
+#green {
+  width: 100%;
+  height: 100vh;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371091/static/assets/img/my-img/green-hero.db66e59d97e3.jpg") top center;
+  background-size: cover;
+  position: relative;
+  padding: 0;
+  border-radius: .5rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#green h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 56px;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
+}
+
+#green h1 span {
+  color: #cda45e;
+}
+
+#green h2 {
+  color: #eee;
+  margin-bottom: 10px 0 0 0;
+  font-size: 22px;
+  text-shadow: rgb(3, 46, 27) 1px 0 10px;
+}
+
+.about {
+  background: url(https://res.cloudinary.com/djdc4rve5/image/upload/v1680371098/static/assets/img/my-img/about.f6658590da58.jpg);
+  background-size: cover;
+  position: relative;
+  padding: 80px 0;
+}
+
+.about:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.about .about-img {
+  position: relative;
+  transition: 0.3s;
+}
+
+.about .about-img img {
+  max-width: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+
+.about .about-img::before {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-left: 5px solid #cda45e;
+  border-top: 5px solid #cda45e;
+  transition: 0.5s;
+}
+
+.about .about-img::after {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 60px;
+  height: 60px;
+  z-index: 1;
+  content: "";
+  border-right: 5px solid #cda45e;
+  border-bottom: 5px solid #cda45e;
+  transition: 0.5s;
+}
+
+.about .about-img:hover {
+  transform: scale(1.03);
+}
+
+.about .about-img:hover::before {
+  left: 10px;
+  top: 10px;
+}
+
+.about .about-img:hover::after {
+  right: 10px;
+  bottom: 10px;
+}
+
+.about .content h3 {
+  font-weight: 600;
+  font-size: 26px;
+}
+
+@media (min-width: 1024px) {
+  .about {
+    background-attachment: fixed;
+  }
+}
 
 /*--------------------------------------------------------------
 # Gallery
@@ -1030,10 +1351,17 @@ footer {
 }
 
 .social-networks {
-  text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-around;
+  padding-right: 2rem;
+  padding-top: 2rem
 }
+
+/*--
+ text-align: center;
+  padding-top: 2rem 3rem;
+}
+*/
 
 .social-networks>li {
   display: inline;
@@ -1049,8 +1377,6 @@ footer {
 .social-networks i:hover {
   transform: scale(1.5);
 }
-
-/* the hover code below is copied from Geeks for Geeks, link in README.md */
 
 .youtube:hover {
   color: red;
@@ -1079,7 +1405,6 @@ footer {
   }
 
 }
-
 
 @media (min-width: 500px) {
   footer {
