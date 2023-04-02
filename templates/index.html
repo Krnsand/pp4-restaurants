@@ -37,7 +37,7 @@
 
 <body>
 
-    <header id="header" class="fixed-top d-flex align-items-cente">
+    <header id="header" class="fixed-top d-flex align-items-center">
         <div class="container-fluid container-xl d-flex align-items-center justify-content-lg-between">
 
             <h1 class="logo me-auto me-lg-0"><a href="#">Vivid Fushion</a></h1>
@@ -45,9 +45,10 @@
                 <ul>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}">Home</a></li>
                     <li><a class="nav-link scrollto" href="{% url 'home' %}">Restaurants</a></li>
+                    <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link active" href="{% url 'bookings' %}">My Bookings</a>
+                        <a class="nav-link" href="{% url 'bookings' %}">My Bookings</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
@@ -66,80 +67,83 @@
     </header>
 
     <!-- Main Content -->
-    <div class="container">
+    <section class="index-page"> 
+        <div class="container">
 
-        <section class="section-bg">
-        {% block content %}
+            {% block content %}
 
+        
 
-        {% endblock %}
+            {% endblock %}
     </div>
 
     <hr>
-</section>
-    <!-- ======= Footer ======= -->
-    
+    </section>
+
+   <!--  ======= Footer ======= -->
+
     <footer>
         <br><br>
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
-        </div>
+        <section id="contact">
+            <div class="container" data-aos="fade-up">
+                <div class="section-title">
+                    <h2>Contact</h2>
+                    <p>Contact Us</p>
+                </div>
 
-        <div class="contact-info">
-        <div class="address">
-            <i class="fa-solid fa-location-pin"></i>
-            <h4>Location:</h4>
-            <p>A108 Adam Street, New York, NY 535022</p>
-        </div>
+                <div class="contact-info">
+                    <div class="address">
+                        <i class="fa-solid fa-location-pin"></i>
+                        <h4>Location:</h4>
+                        <p>A108 Adam Street, New York, NY 535022</p>
+                    </div>
 
-        <div class="open-hours">
-            <i class="fa-regular fa-clock"></i>
-            <h4>Open Hours:</h4>
-            <p>
-                Monday-Saturday:<br>
-                11:00 AM - 2300 PM
-            </p>
-        </div>
+                    <div class="open-hours">
+                        <i class="fa-regular fa-clock"></i>
+                        <h4>Open Hours:</h4>
+                        <p>
+                            Monday-Saturday:<br>
+                            11:00 AM - 2300 PM
+                        </p>
+                    </div>
 
-        <div class="email">
-            <i class="fa-regular fa-envelope"></i>
-            <h4>Email:</h4>
-            <p>info@example.com</p>
-        </div>
+                    <div class="email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <h4>Email:</h4>
+                        <p>info@example.com</p>
+                    </div>
 
-        <div class="phone">
-            <i class="fa-solid fa-phone"></i>
-            <h4>Call:</h4>
-            <p>+1 5589 55488 55s</p>
-        </div>
+                    <div class="phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <h4>Call:</h4>
+                        <p>+1 5589 55488 55s</p>
+                    </div>
 
-    </div>
-    <br>
-        <hr>
-        <ul class="social-networks">
-            <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page (opens in a new tab)"><i
-                        class="fa-brands fa-facebook facebook"></i></a>
-            </li>
-            <li>
-                <a href="https://github.com/Krnsand" target="_blank" rel="noopener"
-                    aria-label="Visit our Github page (opens in a new tab)"><i
-                        class="fa-brands fa-github github"></i></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/karin-sandin-498073200/" target="_blank" rel="noopener"
-                    aria-label="Visit my linkedin page (opens in a new tab)"><i
-                        class="fa-brands fa-linkedin linkedin"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"><i
-                        class="fa-brands fa-instagram instagram"></i></a>
-            </li>
-        </ul>
+                </div>
+                <br>
+                <hr>
+                <ul class="social-networks">
+                    <li>
+                        <a href="https://facebook.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Facebook page (opens in a new tab)"><i
+                                class="fa-brands fa-facebook facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Krnsand" target="_blank" rel="noopener"
+                            aria-label="Visit our Github page (opens in a new tab)"><i
+                                class="fa-brands fa-github github"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/karin-sandin-498073200/" target="_blank" rel="noopener"
+                            aria-label="Visit my linkedin page (opens in a new tab)"><i
+                                class="fa-brands fa-linkedin linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com" target="_blank" rel="noopener"
+                            aria-label="Visit our Instagram page (opens in a new tab)"><i
+                                class="fa-brands fa-instagram instagram"></i></a>
+                    </li>
+                </ul>
     </footer>
 
 
