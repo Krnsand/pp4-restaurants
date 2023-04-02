@@ -2,10 +2,13 @@
 
 {% block content %}
 
-<br><br><br><br><br><br><br>
 
-<h1>My Reservations</h1>
-<br>
+<br><br><br><br>
+
+<div class="section-title">
+  <h2>{{ user.username }}'s Page</h2>
+  <p>My Reservations</p>
+</div>
 
 {% if user.is_authenticated %}
 
@@ -22,15 +25,11 @@
           </div>
         </div>
         <br>
+
         {% endif %}
 
     {% endfor %}
 
-{% else %}
-
-You don't have any reservations yet!
-<br>
-<br>
 {% endif %}
 
 {% endblock %}
