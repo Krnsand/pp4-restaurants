@@ -8,17 +8,17 @@
 {% block content %}
 <br><br><br><br><br>
 
-<div class="card text-center">
+<div class="card text-center login-card">
   <div class="card-header">
-    <h3>{% trans "Sign In" %}</h3>
+    <h3>Welcome Back!</h3>
   </div>
   <div class="card-body">
-    <h5 class="card-title">
-    </h5>
+    <h3 class="card-title">{% trans "Sign In" %}</h3>
+    <h6>{% blocktrans %}Welcome back to Vivid Fusion. To book a table at one of our restaurants, please log in. If you
+      have not created an account yet, then please <a class="link" href="{{ signup_url }}">sign up</a>
+      first.{% endblocktrans %}</h6>
     <p class="card-text">
-      <p>{% blocktrans %}Welcome back to Vivid Fusion. To book a table at one of our restaurants, please log in. If you
-        have not created an account yet, then please <a class="link" href="{{ signup_url }}">sign up</a>
-        first.{% endblocktrans %}
+      <p>
 
         <form class="login" method="POST" action="{% url 'account_login' %}">
           {% csrf_token %}
