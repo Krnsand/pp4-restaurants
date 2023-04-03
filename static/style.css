@@ -1,6 +1,6 @@
 /**
 * Much of my CSS code is copied from this template. 
-* I have altered parts of it, but not enough to claim it as my own.
+* I have written comments on the parts I have styled.
 
 * Template Name: Restaurantly
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -26,8 +26,7 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: #f7af43;
+a:hover { 
   text-decoration: underline;
 }
 
@@ -178,7 +177,7 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0 10px 30px;
+  padding: 10px 20px 10px 20px;
   color: #ffffff;
   white-space: nowrap;
   transition: 0.3s;
@@ -372,6 +371,10 @@ h6 {
   display: block;
 }
 
+/*----------------
+# Viktor
+-----------------*/
+
 @media (max-width: 991px) {
   #header > .container-fluid {
     flex-direction: column;
@@ -383,6 +386,7 @@ h6 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    font-size: 10px;
   }
 }
 
@@ -451,6 +455,7 @@ h6 {
   text-transform: uppercase;
   display: inline-block;
   padding: 12px 30px;
+  margin: 4px;
   border-radius: 50px;
   transition: 0.3s;
   line-height: 1;
@@ -522,17 +527,7 @@ h6 {
   }
 }
 
-@keyframes pulsate-btn {
-  0% {
-    transform: scale(0.6, 0.6);
-    opacity: 1;
-  }
 
-  100% {
-    transform: scale(1, 1);
-    opacity: 0;
-  }
-}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -581,60 +576,14 @@ section {
   text-shadow: rgb(3, 46, 27) 1px 0 10px;
 }
 
-/*--------------------------------------------------------------
-# About
---------------------------------------------------------------*/
-/*.breadcrumbs {
-  padding: 15px 0;
-  background: #1d1b16;
-  margin-top: 110px;
-}
-
-@media (max-width: 992px) {
-  .breadcrumbs {
-    margin-top: 98px;
+@media (max-width: 991px) {
+  .section-title {
+    padding-bottom: 40px;
+    padding-top: 45px;
   }
 }
 
-.breadcrumbs h2 {
-  font-size: 26px;
-  font-weight: 300;
-}
 
-.breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  font-size: 14px;
-}
-
-.breadcrumbs ol li+li {
-  padding-left: 10px;
-}
-
-.breadcrumbs ol li+li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #37332a;
-  content: "/";
-}
-
-@media (max-width: 768px) {
-  .breadcrumbs .d-flex {
-    display: block !important;
-  }
-
-  .breadcrumbs ol {
-    display: block;
-  }
-
-  .breadcrumbs ol li {
-    display: inline-block;
-  }
-}
--*/
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
@@ -743,7 +692,8 @@ section {
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   transition: all ease-in-out 0.3s;
-  background: rgb(158, 165, 144, 0.2);
+  background: rgba(168, 177, 151, 0.407);
+  border-radius: 1rem;
 }
 
 .restaurants .box span {
@@ -806,7 +756,6 @@ section {
   padding: 30px 2rem;
   box-shadow: inset 0 0 0 1000px rgba(14, 20, 15, 0.6);
   border-bottom: 1rem;
-
 }
 
 .form-group {
@@ -818,37 +767,6 @@ background-color: rgba(169, 169, 169, 0.6);
 max-width: 35rem;
 border-top: 1rem;
 }
-
-/*---
-.form-group {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.9rem;
-  color: #fff;
-  background-color: rgb(14 10 3 / 66%);
-}
-
-.book-table .form-group {
-  padding-bottom: 20px;
-  padding: ;
-}
-
-.make-reservation {
-/*  max-width: 60%;
-  padding: 0.5rem 3rem; 
-  margin-left: auto;
-  margin-right: auto;
-  background-color: rgba(14, 10, 3, 0.587);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1.9rem;
-  color: #fff;
-  max-width: 25rem;
-}
-  
-  
-}
-*/
 
 @media (max-width: 300px) {
 
@@ -891,9 +809,9 @@ border-top: 1rem;
 
 
 
-/*------------
+/*----------------------
 # Reservation Made
---------------*/
+-----------------------*/
 .reservation-made {
   display: flex;
   justify-content: center;
@@ -930,6 +848,32 @@ border-top: 1rem;
   padding: 0 1rem;
 }
 
+.login, .signup {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.9rem;
+  color: #fff;
+  background-color: rgba(169, 169, 169, 0.6);
+  max-width: 35rem;
+  border-top: 1rem;
+}
+
+.login-header, .signup-header {
+  display: flex;
+  justify-content: center;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 20px 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(14, 20, 15, 0.6);
+  border-bottom: 1rem;
+}
+
+#register h5 span {
+  color: #cda45e;
+}
+
 .update {
   max-width: 50%;
   background-color: rgba(255, 247, 227, 0.51);
@@ -959,6 +903,7 @@ color: #fff;
 background-color: rgba(169, 169, 169, 0.6);
 max-width: 35rem;
 border-top: 1rem;
+text-align: center;
 }
 
 
@@ -989,7 +934,11 @@ border-top: 1rem;
   border-radius: 10px;
 }
 
-
+@media (max-width: 991px) {
+  .update-reservation {
+    margin-top: 40px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Violet Fusion
@@ -1028,7 +977,7 @@ border-top: 1rem;
 }
 
 .violet-about {
-  background: url(https://res.cloudinary.com/djdc4rve5/image/upload/v1680457982/static/assets/img/my-img/violet-background.395c6edd7859.jpg);
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457988/static/assets/img/my-img/violet-about.d4efcc89d30d.jpg");
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -1142,7 +1091,7 @@ border-top: 1rem;
 }
 
 .green-about {
-  background: url(https://res.cloudinary.com/djdc4rve5/image/upload/v1680371098/static/assets/img/my-img/about.f6658590da58.jpg);
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457986/static/assets/img/my-img/green-background.f408c38edf28.jpg");
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -1435,8 +1384,69 @@ footer {
 # Error
 -----------------*/
 
-.error h1 {
+.error {
+  font-family: "Playfair Display SC", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #faf8f8;
+  text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center; 
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 9.4rem;
+  padding-bottom: 1.5rem;
 }
+
+.error-h2 {
+  font-family: "Playfair Display SC", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f9f6f6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 9.4rem;
+}
+
+
+.error-btn {
+  font-family: "Playfair Display SC", sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #f9f6f6;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: 9.4rem;
+  }
+
+  .btn-back-error {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+    padding: 12px 30px;
+    border-radius: 50px;
+    transition: 0.3s;
+    line-height: 1;
+    color: white;
+    border: 2px solid #cda45e;
+  }
+
+.btn-back-error:hover {
+  background: #cda45e;
+  color: #f6f5f5;
+}
+
+
+ 
+  
+
