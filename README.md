@@ -78,13 +78,12 @@ The target audience is anyone who likes food and would enjoy a concept like this
 
 ### User Stories
 
-User stories were written together with salon owner and were all written to fit within the agile methodology. They have the following criteria:
+User stories were written with frequent restuarant goers in mind, as well as people how might not go out too often. They were all written to fit within the agile methodology and they have the following criteria:
 
 * title
 * clear description
 * acceptance criteria
 * tasks, when acceptance criteria alone weren't clear enough
-* story points
 * epic
 * priority (must have, should have, could have)
 
