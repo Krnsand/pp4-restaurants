@@ -7,7 +7,7 @@ This project is built as part of the Code Institute Full Stack Software Developm
 
 ## Live Site
 
-[NailsbyFaar](https://nailsbyfaar.herokuapp.com/)
+[Vivid Fusion](https://restaurant-concept.herokuapp.com/)
 
 ## Github Repository
 
