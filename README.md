@@ -95,12 +95,12 @@ And the user stories board after finishing the project:
 
 ![user stories board updated](static/images/user-stories-2.png)
 
-As you can see, only one user story was left, which didn't fit in the scope of the project in the end. Since it was a 'could have' the decision to leave it out was easily made. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)
+As you can see there are three stories left, none of them were Must-Haves however so I felt ok with leaving them behing. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)
 
 
 ### Structure of the app
 
-The app is designed to have a natural flow, with a strong focus on the booking functionality. Most pages include booking buttons or calls to book an appointment. The home page specifically features a booking button right on top, so a user doesn't have to scroll at all to make an appointment. This is especially handy and necessary for recurring customers, who will be the gross of the clientele.
+The app is designed to have be easily navigated, highly accessable from every page, as well as with a strong focus on the booking functionality. All pages include the booking button when the user is logged in. The home page specifically features a booking button right on top, as well as one right in the middle of the welcome image so it is easy to book whener the user feels inclined.
 
 ### Logic/Database Diagram
 
@@ -114,120 +114,110 @@ Updated database diagram:
 
 ![database diagram](static/images/database-diagram-updated.png)
 
-Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and forgot password pages and functionality and creating the User model and User Manager model. For the purposes of this project, these two models had to be overridden, since a email address is used for authentication, instead of a username. Furthermore, phone number was added to  the user model.
+Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and forgot password pages and functionality and creating the User model and User Manager model. For the purposes of this project, I decided that the 'AllAUth' packaged templates were just fine, I would however in the fututre like to override them and make something on my own. 
 
-Let's quickly go through the other models:
+My models are as followed:
 
-The Treatment model:
+The Restaurant model:
 
-* used to make a treatment object (the different kind of available treatments at the salon).
-* has a 'display' parameter, meaning: to be displayed on the homepage and treatments page or not.
-* has an 'active' parameter, meaning: to be displayed in the booking tool or not.
-* images are stored in Cloudinary via a CloudinaryField.
+* used to create restaurants in the admin panel to be viewed on the live site and bookable
+* displays the name of the restaurant, an adress as well as opening/closing times and if it is open on mondays and tuesdays or not
+
+The Booking model:
+
+* used to create bookings in the admin panel as well as to be used in a booking form on the live site
+* as the fields for restaurant, user, name, email, date, time, number of guests and for a comment if the user has any allergies or dietary restrictions the restaurant might need to know
+* was used to develop the reservations form on the site
 
 The User model:
 
 * built with Django AllAuth.
-* added phone_number, first_name and last_name.
-
-The Appointment model:
-
-* has foreign key relationships with the user model and treatment model.
-* any appointment will always have a treatment object selected as a foreign key.
-* any appointment can have a user selected as foreign key.
-
-The Planning model:
-
-* is used to configure available/bookable times in the datepicker
-* allow_times takes a comma separated list of time values, for example: 10:00, 10:15, 10:30 etc. This indicates which times on any given day are bookable.
-* disabled_days takes a comma separated list of dates, for example: 10.10.2022, 10.11.2022, 10.12.2022, etc. This indicates days that are off, like holidays.
-* disabled_weekdays takes a comma separated list of numbers, for example: 0, 3, 6. This indicates, with sunday starting at value '0', the days in any given week that are off. So, in the example given, sunday, wednesday and saturday are off days. This will repeat every week.
-* in the datepicker itself, all available times are calculated by using the values available in the active Planning Object and by removing any times from the datepicker where appointments already exist.
-
-The Gallery model:
-
-* used to upload images to Cloudinary, for use on the gallery page.
-* can be added, removed and set to active from the admin panel.
 
 
 ### Color Scheme
 
-The color scheme of the salon itself was used, see the image below. It creates a very feminine and calm look, which perfectly fits the nail polish theme.
+The color scheme of the site was inspired by the hero image that I really liked, see the image below. I feel it creates a coherent theme accross the site without being too repetitive. The forms are styled to collaborate with the navbar, darker and sleek. While the cards are meant to be more light and matched with the image with a more rounded feel to them.
 
 ![color scheme](static/images/color-scheme.png)
 
 ### Features
 
-The app's biggest feature is of course the booking page and consequently, the user dashboard. These two pages are all you need, to book an appointment, cancel the booked appointment or change its date. This is where we will start our journey:
+The app's biggest feature is the home page. Read more about it in its section. Then we have the "Book a table" page where the user can make areservation, and the bookings page where the user can view, edit and delete their resevations. The navbar is featured on all pages and from there the user can go to the booking page to make a reservation, their individual booking page where their reservations are listed, as well as log in or out.
 
-#### Book page
+#### Home page
 
-This page is where most users, especially the recurring ones, will spent the grunt of their time. When you first open the page, you will be welcomed by a simple form with datepicker. You are urged to select a treatment first, since the duration of the treatment is relevant for which times are bookable.
+The home page has an about section, a gallery of images "from the restaurants", as well as a section where the user can click on each restaurant to go to their individual page if they want to know more about them before making a reservatoin. These pages are mostly just to give a brief introduction to the restaurants and give the user a feel for their atmosphere, not to be a complete restaurant website in itself.
 
-![book page](static/images/book.png)
+![home page](static/images/book.png)
 
-After selecting a treatment, the datepicker will become fully visible and usable and users can now select a date. When you select a date, the available times in the time picker will be rendered and user can scroll through the available times. After user picks a time, the time gets entered automatically in the date field of the booking form. The other fields in the form are either auto-filled when user is logged in, or filled in by user upon booking.
+The about page is meant to introduce the user to the restaurant concept as well as give a very brief explanation of what to be expected from the different restaurants
 
-![book page treatment selected](static/images/book-selected-treatment.png)
+![about page](static/images/book-selected-treatment.png)
 
-After hitting the book button, user will get confirmation of their booking and are urged to go to their account dashboard.
+The restaurant boxes are links to the different restaurants where the user is introduced a little bit more to the individual restaurants as well as they allow the users to get a feel for the place, if it will be a place where they will find joy or not.
 
-![book page confirmation](static/images/book-confirmation.png)
+![restaurants boxes](static/images/book-confirmation.png)
 
-#### User dashboard
+The gallery shows some pictures "from the restaurants" (these aren't real restaurants if that was wasn't clear) to give the users a welcoming feel and tickle their intrerest into making a reservation
 
-When the user goes to their account dashboard, they are greeted by two sections: a personal info section and a section with all their booked appointments (if any).
+![gallery](static/images/book-confirmation.png)
 
-![user dashboard](static/images/dashboard.png)
 
-By default, the user's personal info is not editable, to limit the chance of user-error. If the user decides they want to chance some of their info, they can hit the edit button, which will cause the 'First name', 'Last name' and 'Phone number' field to pop open.
+#### Make a Reservation
 
-![user dashboard personal info edit](static/images/dashboard-personal-info.png)
+This page is just a reservations form. Here the user can choose which restaurant they want to make a reservation at, how many their party will consist of, at what date and time, as well as leave a comment if there is any addintional information the restaurant might need. 
 
-After hitting 'save', the fields will now all become uneditable again and a little alert will slide in view confirming the edits were saved to the database. After 4 seconds this alert will slide out of the way, but a user can also close the alert themselves if they wish.
+![reservations form](static/images/dashboard.png)
 
-![user dashboard personal info edit confirmation](static/images/dashboard-personal-info-confirmation.png)
+This page is only reachable once logged in as you need an account to make a reservation.
 
-On the other side of the dashboard, user will find all their booked appointments. Which they can expand like an 'accordion' by clicking on the element.
+![error message reservation](static/images/dashboard.png)
 
-![user dashboard booked appointments](static/images/dashboard-appt.png)
+Once a reservation has been made, the user gets a message to confirm the reservation.
 
-When the date of an appointment is less than 48 hours in the future, it's not possible to change or cancel an appointment, which is indicated by greyed out buttons.
+![reservations confirmed](static/images/dashboard.png)
 
-![user dashboard cancel blocked](static/images/dashboard-cancel-blocked.png)
 
-When an appointment lays further in the future, user can can cancel the appointment by clicking on the cancel button.
-When cancel gets clicked, user will be asked to confirm their choice, by a modal that pops up. This is to make sure the user really meant to click the cancel button, since cancelling an appointment by mistake would be very inconvenient.
+#### Bookings page
 
-![user dashboard cancel modal](static/images/dashboard-cancel.png)
+Here the user is greeted with a page with all their bookings (if they have any yet) as neat little cards that they can click on to get the details about individual bookings. These reservation cards are listed in the order of the nearest date, so that the user  will know which of their many many lovely dinner reservations is next in line at all times.
 
-The other button present in the appointment accordions is a 'Change date' button. This button will allow the user to change the date of the appointment. After clicking the button, they will be redirected to a page similar to the booking page, except the treatment is pre-selected. Furthermore, the only thing they can change is the date.
+![bookings page](static/images/dashboard.png)
 
-![user dashboard edit](static/images/dashboard-edit.png)
+This page is only reachable once logged in as it contains sensitive information. If someone were to try to access it without being logged in, they will be directed to the signup page.
 
-#### Home
 
-Let's get on with the rest of the website. The home page features a few elements. We'll look at them from top to bottom.
+#### Details page 
 
-#### Nav bar 
+The details page shows the user the details of ther reservations. The restaurant, the date and time, number of guests, as well as their comment if they decided to leave one. Here the user can also choose to edit or delete their reservations. There are buttons that will tak ethem to the next page, or back to their bookings page if they rather want that.
 
-At the top of the page you'll find a nav bar. This bar has two appearances, for being displayed either on top of the hero-image of the homepage, or above the content of the other pages.
+![details page](static/images/nav-home.png)
 
-![homepage-nav](static/images/nav-home.png)
+This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
 
-![homepage-other](static/images/nav-other.png)
+![details error message](static/images/dashboard.png)
 
-The nav bar will display either a login button, or when user is logged in, their name. When user clicks their name, a menu will pop out with the options to log out or go to their user dashboard.
+#### Edit page
 
-![nav-user-logged-in](static/images/nav-user.png)
+On this page the user can edit their reservations. The fields that can be edited are, time, date, number of guests and the comment. If the user wants to change the restaurant they will have to delete the reservation make a new one instead.
 
-#### Hero Image
+![edit page](static/images/nav-other.png)
 
-The hero image will probably be the very first element that catches the users eye when visiting this website. It's a stunning image shot at the Nail Salon.
+This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
 
-![hero-image](static/images/home-hero-image.png)
+![edit error message](static/images/dashboard.png)
 
-#### Treatments
+#### Delete page
+
+On this page the user can delete their reservation.
+
+![delete page](static/images/home-hero-image.png)
+
+This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
+
+![delete error message](static/images/dashboard.png)
+
+#### Signup page
 
 After user scrolls down a bit, they will see the highlighted treatments. Clicking on the element will bring them to the treatments page, where they can read more about the treatment. Clicking on the book button will bring them to the book page.
 
