@@ -4,43 +4,35 @@
 
 {% if user.is_authenticated %}
 {% if user.id == booking.user.id %}
-    {% if submitted %}
-        <div class="container booking-updated">
-            
-            <h4>Your reservation has been Updated!</h4>
-            
-        </div>
-    {% else %}
+{% if submitted %}
+<div class="container booking-updated">
+
+    <h4>Your reservation has been Updated!</h4>
+
+</div>
+{% else %}
 
 <section id="book-a-table" class="update-booking">
     <div class="container" data-aos="fade-up">
         <br><br>
-<!--
-      <div class="card text-center update">
-            <div class="card-header">
-                <h2>Update your Reservation</h2>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text">
--->
-                    <div class="update-reservation text-center">
-                        <h3>Make a Reservation at One of Our Restaurants!</h3>
-                    </div>
-                    <form method="post" class="update-form">
-                        {% csrf_token %}
-                        {{ form.as_p }}
-                        <button class="btn btn-success">Update</button>
-                    </form>
-                </p>
-            </div>
-            <div class="card-footer text-body-secondary">
-                <a href="{% url 'details' booking.pk %}" class="btn btn-back">Back</a>
-            </div>
+        <div class="update-reservation text-center">
+            <h3>Make a Reservation at One of Our Restaurants!</h3>
+        </div>
+        <form method="post" class="update-form">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-success">Update</button>
+        </form>
+        </p>
+    </div>
+    <br>
+    <div class="d-grid gap-2 col-5 mx-auto">
+        <a href="{% url 'details' booking.pk %}" class="btn btn-back">Back</a>
         </div>
     </div>
+    </div>
 </section>
-    {% endif %}
+{% endif %}
 
 {% else %}
 
@@ -58,4 +50,3 @@
 <br><br><br>
 
 {% endblock %}
-
