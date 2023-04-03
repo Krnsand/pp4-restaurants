@@ -67,7 +67,7 @@
             <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
             {% endif %}
             </ul>
-            
+
     </header>
 
     <!-- ======= Hero Section ======= -->
@@ -76,12 +76,13 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h1>Welcome to <span>Vivid Fusion</span></h1>
-                    <h2>A place to try great food</h2>
+                    <h2>A place to find great food</h2>
 
                     <div class="btns">
                         <a href="#restaurants" class="btn-menu animated fadeInUp scrollto">Our Restaurants</a>
                         {% if user.is_authenticated %}
-                        <a href="{% url 'add-reservation' %}" class="btn-book animated fadeInUp scrollto">Book a Table</a>
+                        <a href="{% url 'add-reservation' %}" class="btn-book animated fadeInUp scrollto">Book a
+                            Table</a>
                         {% endif %}
                     </div>
                 </div>
@@ -99,40 +100,29 @@
                 <div class="row">
                     <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in" data-aos-delay="100">
                         <div class="about-img">
-                            <img src="https://res.cloudinary.com/djdc4rve5/image/upload/v1680457993/static/assets/img/my-img/about.960e215a7a3d.jpg" alt="">
+                            <img src="https://res.cloudinary.com/djdc4rve5/image/upload/v1680457993/static/assets/img/my-img/about.960e215a7a3d.jpg"
+                                alt="">
                         </div>
                     </div>
                     <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
-                        <h3>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</h3>
+                        <h3>A new restaurant group concept bringing you great food for your every mood.</h3>
                         <p class="fst-italic">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                            incididunt ut
-                            labore et
-                            dolore
-                            magna aliqua.
+                            We here at Vivid fusion have a passion for food in all its forms. From locally sourced fine
+                            dining to family style sharing platters with dishes from around the world.
+                            Vivid fusion is a restaurant group concept where we have gathered our 3 restaurants in one
+                            place so that you won’t have to scour the internet to find them.
                         </p>
                         <ul>
-                            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat.</li>
-                            <li><i class="bi bi-check-circle"></i> Duis aute irure dolor in reprehenderit in
-                                voluptate
-                                velit.</li>
-                            <li><i class="bi bi-check-circle"></i> Ullamco laboris nisi ut aliquip ex ea commodo
-                                consequat. Duis aute
-                                irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore
-                                eu
-                                fugiat nulla
-                                pariatur.</li>
+                            <li><i class="bi bi-check-circle"></i> Violet Fusion, a fusion restaurant
+                                with influence from all parts of Asia and Latin America.
+                            </li>
+                            <li><i class="bi bi-check-circle"></i> Green Dining, a restaurant with a passion for locally
+                                and seasonlly hunted game so you can be sure to eat organic. </li>
+                            <li><i class="bi bi-check-circle"></i> Orange Cushion, a restaurant where we can seat big
+                                parties for a family styled meal where everyone shares their plates, as well as small
+                                parties for a more intimate experience.
+                            </li>
                         </ul>
-                        <p>
-                            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-                            reprehenderit in
-                            voluptate
-                            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                            non
-                            proident, sunt in
-                            culpa qui officia deserunt mollit anim id est laborum
-                        </p>
                     </div>
                 </div>
 
@@ -156,9 +146,8 @@
                             <div class="box" data-aos="zoom-in" data-aos-delay="100">
                                 <span>01</span>
                                 <h4>Violet Fusion</h4>
-                                <p>Ulamco laboris nisi ut aliquip ex ea commodo consequat. Et consectetur ducimus
-                                    vero
-                                    placeat</p>
+                                <p>With influence from Asia and Latin America, we bring you a modern twist on classic
+                                    dishes as well as entirely unique creations</p>
                             </div>
                         </a>
                     </div>
@@ -168,10 +157,8 @@
                             <div class="box" data-aos="zoom-in" data-aos-delay="200">
                                 <span>02</span>
                                 <h4>Green Dining</h4>
-                                <p>Dolorem est fugiat occaecati voluptate velit esse. Dicta veritatis dolor quod et
-                                    vel dire
-                                    leno para
-                                    dest</p>
+                                <p>Always local, always fresh. Welcome to a drink at our bar or have a seat in the
+                                    restaurant, we guarantee a great atmosphere.</p>
                             </div>
                         </a>
                     </div>
@@ -181,9 +168,8 @@
                             <div class="box" data-aos="zoom-in" data-aos-delay="300">
                                 <span>03</span>
                                 <h4>Orange Cushion</h4>
-                                <p>Molestiae officiis omnis illo asperiores. Aut doloribus vitae sunt debitis quo
-                                    vel nam
-                                    quis</p>
+                                <p>Family style means homey and comfy. Comfort food from all over the world served in
+                                    the same place to be shared with loved ones.</p>
                             </div>
                         </a>
                     </div>
@@ -194,7 +180,7 @@
             <br><br><br>
             <div class="d-grid gap-2 col-6 mx-auto">
                 <a href="{% url 'error' %}" type="button" class="btn btn-back">Check Availability at Our Restaurants</a>
-              </div>
+            </div>
         </section>
         <!-- End Why Us Section -->
 
@@ -379,89 +365,89 @@
         </div>
     </footer> End Footer -->
 
-    <footer>
-        <br><br>
-<section id="contact">
-    <div class="container" data-aos="fade-up">
-        <div class="section-title">
-            <h2>Contact</h2>
-            <p>Contact Us</p>
-        </div>
+        <footer>
+            <br><br>
+            <section id="contact">
+                <div class="container" data-aos="fade-up">
+                    <div class="section-title">
+                        <h2>Contact</h2>
+                        <p>Contact Us</p>
+                    </div>
 
-        <div class="contact-info">
-        <div class="address">
-            <i class="fa-solid fa-location-pin"></i>
-            <h4>Location:</h4>
-            <p>A108 Adam Street, New York, NY 535022</p>
-        </div>
+                    <div class="contact-info">
+                        <div class="address">
+                            <i class="fa-solid fa-location-pin"></i>
+                            <h4>Location:</h4>
+                            <p>A108 Adam Street, New York, NY 535022</p>
+                        </div>
 
-        <div class="open-hours">
-            <i class="fa-regular fa-clock"></i>
-            <h4>Open Hours:</h4>
-            <p>
-                Monday-Saturday:<br>
-                11:00 AM - 2300 PM
-            </p>
-        </div>
+                        <div class="open-hours">
+                            <i class="fa-regular fa-clock"></i>
+                            <h4>Open Hours:</h4>
+                            <p>
+                                Monday-Saturday:<br>
+                                11:00 AM - 2300 PM
+                            </p>
+                        </div>
 
-        <div class="email">
-            <i class="fa-regular fa-envelope"></i>
-            <h4>Email:</h4>
-            <p>info@example.com</p>
-        </div>
+                        <div class="email">
+                            <i class="fa-regular fa-envelope"></i>
+                            <h4>Email:</h4>
+                            <p>info@example.com</p>
+                        </div>
 
-        <div class="phone">
-            <i class="fa-solid fa-phone"></i>
-            <h4>Call:</h4>
-            <p>+1 5589 55488 55s</p>
-        </div>
+                        <div class="phone">
+                            <i class="fa-solid fa-phone"></i>
+                            <h4>Call:</h4>
+                            <p>+1 5589 55488 55s</p>
+                        </div>
 
-    </div>
-    <br>
-        <hr>
-        <ul class="social-networks">
-            <li>
-                <a href="https://facebook.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Facebook page (opens in a new tab)"><i
-                        class="fa-brands fa-facebook facebook"></i></a>
-            </li>
-            <li>
-                <a href="https://github.com/Krnsand" target="_blank" rel="noopener"
-                    aria-label="Visit our Github page (opens in a new tab)"><i
-                        class="fa-brands fa-github github"></i></a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/karin-sandin-498073200/" target="_blank" rel="noopener"
-                    aria-label="Visit my linkedin page (opens in a new tab)"><i
-                        class="fa-brands fa-linkedin linkedin"></i></a>
-            </li>
-            <li>
-                <a href="https://instagram.com" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (opens in a new tab)"><i
-                        class="fa-brands fa-instagram instagram"></i></a>
-            </li>
-        </ul>
-    </section>
-    </footer>
+                    </div>
+                    <br>
+                    <hr>
+                    <ul class="social-networks">
+                        <li>
+                            <a href="https://facebook.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Facebook page (opens in a new tab)"><i
+                                    class="fa-brands fa-facebook facebook"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/Krnsand" target="_blank" rel="noopener"
+                                aria-label="Visit our Github page (opens in a new tab)"><i
+                                    class="fa-brands fa-github github"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/karin-sandin-498073200/" target="_blank" rel="noopener"
+                                aria-label="Visit my linkedin page (opens in a new tab)"><i
+                                    class="fa-brands fa-linkedin linkedin"></i></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com" target="_blank" rel="noopener"
+                                aria-label="Visit our Instagram page (opens in a new tab)"><i
+                                    class="fa-brands fa-instagram instagram"></i></a>
+                        </li>
+                    </ul>
+            </section>
+        </footer>
 
-    <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-            class="fa-solid fa-chevron-up"></i></a>
+        <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+                class="fa-solid fa-chevron-up"></i></a>
 
 
-    <!-- font awesome script -->
-    <script src="https://kit.fontawesome.com/fa6067118b.js" crossorigin="anonymous"></script>
+        <!-- font awesome script -->
+        <script src="https://kit.fontawesome.com/fa6067118b.js" crossorigin="anonymous"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
-    <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
-    <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
-    <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+        <!-- Vendor JS Files -->
+        <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+        <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+        <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
 
-    <script>
-        AOS.init();
-    </script>
-    <script src="{% static 'assets/js/main.js' %}"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
 </body>
 
 </html>
