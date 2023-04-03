@@ -30,6 +30,7 @@
 
     <!-- Main CSS -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/vendor/bootstrap/scss' %}">
 
     <title>Vivid Fusion</title>
 </head>
@@ -64,7 +65,7 @@
                     {% endif %}
             </nav><!-- .navbar -->
             {% if user.is_authenticated %}
-            <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-none d-lg-flex">Book a table</a>
+            <a href="{% url 'add-reservation' %}" class="book-a-table-btn scrollto d-lg-flex">Book a table</a>
             {% endif %}
             </ul>
 
