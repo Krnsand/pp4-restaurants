@@ -1,0 +1,58 @@
+ID c22e2f36-887e-49ef-bdbf-9501ef2569ed
+-----> Building on the Heroku-22 stack
+-----> Using buildpack: heroku/python
+-----> Python app detected
+-----> No Python version was specified. Using the same version as the last build: python-3.11.2
+       To use a different version, see: https://devcenter.heroku.com/articles/python-runtimes
+-----> No change in requirements detected, installing from cache
+-----> Using cached install of python-3.11.2
+-----> Installing pip 23.0.1, setuptools 63.4.3 and wheel 0.38.4
+-----> Installing SQLite3
+-----> Installing requirements with pip
+-----> $ python manage.py collectstatic --noinput
+       Traceback (most recent call last):
+         File "/tmp/build_fbd0d843/manage.py", line 22, in <module>
+           main()
+         File "/tmp/build_fbd0d843/manage.py", line 18, in main
+           execute_from_command_line(sys.argv)
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/core/management/__init__.py", line 419, in execute_from_command_line
+           utility.execute()
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/core/management/__init__.py", line 413, in execute
+           self.fetch_command(subcommand).run_from_argv(self.argv)
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/core/management/base.py", line 354, in run_from_argv
+           self.execute(*args, **cmd_options)
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/core/management/base.py", line 398, in execute
+           output = self.handle(*args, **options)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 187, in handle
+           collected = self.collect()
+                       ^^^^^^^^^^^^^^
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/contrib/staticfiles/management/commands/collectstatic.py", line 128, in collect
+           for original_path, processed_path, processed in processor:
+         File "/app/.heroku/python/lib/python3.11/site-packages/cloudinary_storage/storage.py", line 344, in post_process
+           for response in super(HashCloudinaryMixin, self).post_process(
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/contrib/staticfiles/storage.py", line 399, in post_process
+           yield from super().post_process(*args, **kwargs)
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/contrib/staticfiles/storage.py", line 231, in post_process
+           for name, hashed_name, processed, _ in self._post_process(paths, adjustable_paths, hashed_files):
+         File "/app/.heroku/python/lib/python3.11/site-packages/django/contrib/staticfiles/storage.py", line 315, in _post_process
+           saved_name = self._save(hashed_name, original_file)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         File "/app/.heroku/python/lib/python3.11/site-packages/cloudinary_storage/storage.py", line 252, in _save
+           if not self._exists_with_etag(name, content):
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+         File "/app/.heroku/python/lib/python3.11/site-packages/cloudinary_storage/storage.py", line 241, in _exists_with_etag
+           etag = response.headers["ETAG"].split('"')[1]
+                  ~~~~~~~~~~~~~~~~^^^^^^^^
+         File "/app/.heroku/python/lib/python3.11/site-packages/requests/structures.py", line 52, in __getitem__
+           return self._store[key.lower()][1]
+                  ~~~~~~~~~~~^^^^^^^^^^^^^
+       KeyError: 'etag'
+ !     Error while running '$ python manage.py collectstatic --noinput'.
+       See traceback above for details.
+       You may need to update application code to resolve this error.
+       Or, you can disable collectstatic for this application:
+          $ heroku config:set DISABLE_COLLECTSTATIC=1
+       https://devcenter.heroku.com/articles/django-assets
+ !     Push rejected, failed to compile Python app.
+ !     Push failed
