@@ -7,8 +7,8 @@
 <div class="reservation-made text-center">
     <h4>Your reservation is now made. We look forward to seeing you!</h4>
 </div>
-{% else %}
 
+{% else %}
 
 <section id="book-a-table" class="book-table">
     <div class="container" data-aos="fade-up">
@@ -21,14 +21,16 @@
             {% csrf_token %}
             {{ form.as_p }}
             <input type="submit" value="Submit" class="btn btn-dark"><a href="{% url 'bookings' %}"></a>
-
             </p>
     </div>
-    
 </section>
 
 {% endif %}
 
+{% else %}
+<div class="reservation-made text-center">
+    <h4>Please Signup/Login to make a Reservation</h4>
+</div>
 <br><br>
 {% endif %}
 

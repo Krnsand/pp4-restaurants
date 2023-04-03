@@ -35,44 +35,12 @@
         </div>
     </div>
 </section>
-        <!--
-        <h2>Delete your Reservation</h2>
-        <br>
-        <h3>Delete: {{ booking.date }} </h3>
-        <br>
-        <form method="post" class="my-class">
-            {% csrf_token %}
-            <br>
-            <strong>Are you sure you want to delete this reservation?</strong>
-            <br><br>
-            <button class="btn btn-danger">Delete Reservation</button>
-            <a href="{% url 'details' booking.pk %}" class="btn btn-success">Back</a>
-        </form>
-</section>
-
-{% else %}
-
-<section id="book-a-table" class="book-a-table">
-    <div class="container" data-aos="fade-up">
-        <br><br><br><br>
-        <h2>Please register/login to handle reservations</h2>
-        <br>
-    </div>
-</section>
-
+    {% endif %}
+    {% else %}
+<div class="reservation-made text-center">
+    <h4>Please register/login to handle reservations</h4>
+</div>
+<br><br>
 {% endif %}
-{% else %}
-
-<section id="book-a-table" class="book-a-table">
-    <div class="container" data-aos="fade-up">
-        <br><br><br><br>
-        <h2>Please register/login to handle reservations</h2>
-        <br>
-    </div>
-</section>
-
-{% endif %}
-
--->
 
 {% endblock %}
