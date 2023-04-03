@@ -3,7 +3,7 @@
 
 ![Multi screen mockup](static/images/multi-device-mockup.png)
 
-This project is built as part of the Code Institute Full Stack Software Development course. For this course, Dirk Ornee had to built a fourth Portfolio Project. Since his cousin just started a nail salon and was in dire need of a website with booking capabilities, what better way to build a fourth Portfolio Project and help somebody at the same time! Important note: this is not the actual live version that is used by the nail salon, this version is used purely as a project for Code Institute and users can book appointments freely (you won't suddenly be expected to show up at a nail salon).
+This project is built as part of the Code Institute Full Stack Software Development course. I decided to make an app that would make dining and choosing restaurants a littl bit easier for some people. Important note: this is not an actual live site that exists out in the world, it is used purely as a project for Code Institute and users can make reservations freely (you won't be expected to show up at any restaurants).
 
 ## Live Site
 
@@ -28,22 +28,22 @@ This project is built as part of the Code Institute Full Stack Software Developm
         - [Logic/Database Diagram](#logicdatabase-diagram)
         - [Color Scheme](#color-scheme)
         - [Features](#features)
-            - [Book page](#book-page)
-            - [User dashboard](#user-dashboard)
-            - [Home](#home)
-            - [Nav bar](#nav-bar)
-            - [Hero Image](#hero-image)
-            - [Treatments](#treatments)
-            - [About](#about)
+            - [Home Page](#home-page)
+            - [Make a Reservation](#make-reservation)
+            - [Bookings](#bookings)
+            - [Details](#details)
+            - [Edit](#edit)
+            - [Delete](#delete)
+            - [Signup](#signup)
+            - [Login](#login)
+            - [Logout](#logout)
+            - [Navbar](#navbar)
             - [Footer](#footer)
-            - [About](#about)
-            - [Treatments](#treatments)
-            - [Gallery](#gallery)
-            - [Contact](#contact)
-            - [Login/Logout](#loginlogout)
+            - [Violet](#violet)
+            - [Green](#green)
+            - [Orange](#orange)
             - [Admin](#admin)
         - [Future Features](#future-features)
-            - [Notifications](#notifications)
     - [Credits](#credits)
         - [Code](#code)
         - [Images](#images)
@@ -57,10 +57,8 @@ This project is built as part of the Code Institute Full Stack Software Developm
         - [Local Deployment](#local-deployment)
         - [Production Deployment Initial](#production-deployment-initial)
             - [Create Heroku app:](#create-heroku-app)
-            - [Connect Postgres Database:](#connect-postgres-database)
+            - [Connect ElephantSQL Database:](#connect-postgres-database)
             - [Deploy App on Heroku:](#deploy-app-on-heroku)
-        - [Production Deployment Update](#production-deployment-update)
-            - [PostgreSQL database:](#postgresql-database)
     - [Acknowledgements](#acknowledgements)
 
 <!-- /TOC -->
@@ -163,7 +161,7 @@ The gallery shows some pictures "from the restaurants" (these aren't real restau
 ![gallery](static/images/book-confirmation.png)
 
 
-#### Make a Reservation
+#### Make Reservation
 
 This page is just a reservations form. Here the user can choose which restaurant they want to make a reservation at, how many their party will consist of, at what date and time, as well as leave a comment if there is any addintional information the restaurant might need. 
 
@@ -209,7 +207,7 @@ This page is also only reachable once logged in as it contains sensitive informa
 
 #### Delete page
 
-On this page the user can delete their reservation.
+On this page the user can delete their reservation. It is shown with a message asking if the user is sure they want to delete. There is a back button as well in case the user does not want to delete the booking.
 
 ![delete page](static/images/home-hero-image.png)
 
@@ -217,63 +215,78 @@ This page is also only reachable once logged in as it contains sensitive informa
 
 ![delete error message](static/images/dashboard.png)
 
-#### Signup page
+#### Signup
 
-The signup page is what it sounds like, the page where a potential user can sign up for an account!
+The signup page is what it sounds like, the page where a potential user can sign up for an account! If the user is a recurring user, there is a link to the login page here as well.
 
 ![signup page](static/images/home-treatments.png)
 
-#### About
+The form shows error messages in case the form is not filled out correctly.
 
-Below the treatments, user will find a little text about the salon, with a photo.
+![signup errors](static/images/home-treatments.png)
 
-![home-about](static/images/home-about.png)
+#### Login
+
+This page is where an already user can log into their account! If they for some reason don't already have an account, there is a link to the signup page here as well.
+
+![login](static/images/home-about.png)
+
+The form shows error messages in case the username and password do not match.
+
+![login errors](static/images/home-treatments.png)
+
+#### Logout
+
+This is the logout page, the user is asked if they really want to log out.
+
+![logout](static/images/home-footer.png)
+
+#### Navbar
+
+The navbar is visable on all pages for easy navigation. When logged in there is a "book a table" button in the navbar
+
+![navbar in](static/images/about.png)
+
+But when the user is not logged in, it is not possible to book a table
+
+![navbar out](static/images/about.png)
 
 #### Footer
 
-At the bottom of the page, there is a footer. The footer houses a map with the location of NailsbyFaar, some contact info and the social links.
+The footer holds the contact information to the restaurant group Vivid Fusion. For now they handle all reservations and question, until the restaurants themselves are more self sufficient on that front.
 
-![home-footer](static/images/home-footer.png)
+![footer](static/images/treatments.png)
 
-#### About
+#### Violet Fusion 
 
-The next page is the about page. This is simply an extension of the about section on the home page and features an image and some text about the owner of the salon.
+This is the "Home Page" of Violet Fusion, the first restaurant in this group. Here the user can read a little bit about it before choosing to make a reservation.
 
-![about](static/images/about.png)
+![violet](static/images/gallery.png)
 
-#### Treatments
+![violet-about](static/images/gallery-insta.png)
 
-The treatments page features the main treatments with explanations of what they are. There is also a book button for the user to immediately book an appointment.
+#### Green Dining
 
-![treatments](static/images/treatments.png)
+This is the "Home Page" of Green Dining, the second restaurant in this group. Here the user can read a little bit about it before choosing to make a reservation.
 
-#### Gallery 
+![green](static/images/gallery.png)
 
-The gallery page displays a little gallery with some images of recent work done by Nailsbyfaar. On the bottom of the page, the user is encouraged to visit her instagram.
+![green-about](static/images/gallery-insta.png)
 
-![gallery](static/images/gallery.png)
+#### Orange Cushion
 
-![gallery-insta](static/images/gallery-insta.png)
+This is the "Home Page" of Orange Cushion, the third and last (so far) restaurant in this group. Here the user can read a little bit about it before choosing to make a reservation.
 
-#### Contact
+![orange](static/images/gallery.png)
 
-The contact page displays a simple form for the user to fill out in order to send a message to the owner.
+![orange-about](static/images/gallery-insta.png)
 
-![contact](static/images/contact.png)
 
-#### Login/Logout
+#### Error 404
 
-If a user doesn't have an account yet, they can sign up, by filling in the form.
+This is an error page where the user has clicked on a page that is currently unavailable.
 
-![signup](static/images/sign-up.png)
-
-Once a user has an account, they can login.
-
-![login](static/images/login.png)
-
-If the user wants to logout via the navbar, they'll have to confirm this decision.
-
-![logout](static/images/logout.png)
+![error](static/images/logout.png)
 
 
 #### Admin
@@ -282,90 +295,44 @@ Site owner has a lot of control over the website and database entries via the ad
 
 ![admin](static/images/admin.png)
 
-The user can look at registered email-adresses, appointments, gallery images, planning, treatments and users. The social accounts are not in use and groups can be used if wanted. Let's have a look at some of them.
-
-The first thing you would probably add is a planning, so users know which times they can book. This is what the planning object looks like:
-
-![admin-planning](static/images/admin-planning.png)
-
-After adding a planning, some treatments should be added, so a user can actually book a treatment. The treatments can be displayed in the booking module, on the home page and treatment page, both or neither. This is what the overview of different treatments will look like:
-
-![admin-treatments](static/images/admin-treatments.png)
-
-A treatment object looks as follows:
-
-![admin-change-treatment](static/images/admin-change-treatment.png)
-
-After adding these object, a user should now be able to see a fully functional book page and be able to book an appointment. After some appointments are booked, you'll see a list of appointments in the admin panel:
-
-![admin-appointments](static/images/admin-appointments.png)
-
-Which when opened, look as follows:
-
-![admin-change-appointment](static/images/admin-change-appointment.png)
-
-The final thing that can be added is some images for the gallery page.
-
-![admin-gallery](static/images/admin-gallery.png)
-
 ### Future Features
 
-An important feature for the admin, is a link to a google agenda that displays all appointments in a calender. This way, there is a clear and easy oversight in the planning. This was also the only remaining user story.
-
-#### Notifications
-
-Users can already receive notifications via email, but it would be great to have the option of enabling sms notifications, since these tend to reach the user better (no danger of ending up in the spam folder).
+A future feature I would like to implement is the ability to check availability for tables at the different restaurants and in that way avoid double bookings.
 
 
 ## Credits
 
 ### Code
 
-* [Stackoverflow(answer from 'Aaron')](https://stackoverflow.com/a/61139427/16545052) - for the regex validation on the 'allowed_times' model.
-* [Stackoverflow(answer from 'xyres')](https://stackoverflow.com/a/43305140/16545052) - for using Django context variables in Javascript.
-* [Reddit(answer from OP himself)](https://www.reddit.com/r/django/comments/ma35nu/django_allauth_custom_signup_form_doesnt_save_all/) - to allow allauth adapter to be overriden, for saving of phone numbers in database.
-* [Medium article](https://gavinwiener.medium.com/modifying-django-allauth-forms-6eb19e77ef56) - for adding extra fields to allauth.
-* [Medium article](https://medium.com/@ksarthak4ever/django-custom-user-model-allauth-for-oauth-20c84888c318) - for making a custom user model connected to allauth.
-* [Stackoverflow(answer from 'Stilian')](https://stackoverflow.com/a/67664840/16545052) - for the clean method in the booking form
-* [Stackeroverflow(answer from 'Colin')](https://stackoverflow.com/a/36925822/16545052) - for making a workaround for the disabled field in the booking form
-* [Stackeroverflow(answer from 'Devang Padhiyar')](https://stackoverflow.com/a/55561290/16545052) - to add two querysets together in Dashboard view
-* [Stackeroverflow(answer from 'fceruti')](https://stackoverflow.com/a/9957402/16545052) - to update a user instances information in the POST method of the Dashboard view.
-* [Stackeroverflow(answer from 'Alex Fuentes')](https://stackoverflow.com/a/25319333/16545052) - to make the alert message that appears when editing user data slide up after 4 seconds. 
-* [Codepen](https://codepen.io/dotproto/pen/mdOXve) - for the css code of a divider used on homepage.
-* [Stackeroverflow(answer from 'Griffosx')](https://stackoverflow.com/a/13624393/16545052) - to check if loop index is even or uneven in treatments page. 
-* [Stackoverflow(answer from 'vee')](https://stackoverflow.com/a/70415401/16545052) - to listen to the mobile navbar events.
-* [Github(responsive-html-email-template)](https://github.com/leemunroe/responsive-html-email-template) - for a basic html template for emailing.
-
+* [Codemy.com on Youtube](https://www.youtube.com/@Codemycom) - for the styling of forms as well as linking bookings to specific users.
+* [AOS](https://michalsnik.github.io/aos/) - for making the dispay-delay easy 
+* [Restaurantly](https://themewagon.com/themes/free-bootstrap-5-html-5-restaurant-website-template-restaurantly/) - a bootstrap template whos layout I liked but could not use straight up as it did not work well with django. I ended up copying sections of code to use in my project, see comments in code.
 
 ### Images
 
 All images used in the readme are screenshots of the project and a multi device mock up generated with [mockup generator](https://techsini.com/multi-mockup/index.php)
-Images inside the app are either royalty free stock imagery, or courtesy of NailsbyFaar.
+All images inside the app are royalty free stock imagery.
 
 ### Technologies used
 
 [HTML](https://html.spec.whatwg.org/) - for the structure of the website and mocking of the terminal (written by Code Institute)
 
-[HTMLemail/inline](https://htmlemail.io/inline/) - for making the email html template into inline html.
-
 [CSS](https://www.w3.org/Style/CSS/Overview.en.html) - to provide styling to the page.
 
-[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - for the structure of the website and mocking of the terminal (written by Code Institute)
+[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) - for the structure and animation of the website.
 
 [Python](https://www.python.org/) - to write all the logic of the app
 
 [Django](https://www.djangoproject.com/) - used as main framework for the app, which both all backend and most frontend elements are built on. The following notable libraries/packages were added to django:
 
-* django-ses: for handling emails with Amazon's SES.
 * django-allauth: for handing all user models and login functionality.
 * cloudinary: for saving images in cloudinary and serving them to the client.
 * django-crispy-forms: for making the django forms look better.
+* django-bootstrap-datepicker-plus - for the datepicker in the bookings form.
 
 [ElephantSQL](https://www.elephantsql.com/) - used to manage a PostgreSQL database.
 
-[Bootstrap 5.2](https://getbootstrap.com/) - used to style the grunt of the project.
-
-[Jquery](https://jquery.com/) - to make DOM manipulation a bit less painful.
+[Bootstrap 4](https://getbootstrap.com/) - used to style most of the project.
 
 [Lucidchart](https://www.lucidchart.com/pages/) used to make a database diagram.
 
@@ -375,15 +342,19 @@ Images inside the app are either royalty free stock imagery, or courtesy of Nail
 
 [Heroku](https://dashboard.heroku.com/) - to deploy the app.
 
+[NuHtmlChecker](https://validator.w3.org/) - used to validate HTML.
+
+[JigsawW3](https://jigsaw.w3.org/css-validator/validator.html.en) - used to validate css.
+
 [JShint](https://jshint.com/) - used to validate javascript.
 
-[NuHtmlChecker](https://validator.w3.org/nu/) - used to validate HTML.
+[PEP8 and black](https://pypi.org/project/black/) - used to format python.
 
 [Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) - to create an image of the website shown on different devices.
 
 ## Testing
 
-Extensive testing was done to make sure all the features work as expected. To read all about this, please go to the separate [testing document](TESTING.md).
+Testing was done through out the project to make sure all the features work as expected. To read all about this, please go to the separate [testing document](TESTING.md).
 
 ## Security Features and Defensive Design
 
@@ -394,7 +365,7 @@ Extensive testing was done to make sure all the features work as expected. To re
 
 ### Form Validation
 
-Extensive form validation is used on front end as well as backend.
+Form validation is used on front end as well as backend.
 
 ### Database Security
 
@@ -411,11 +382,11 @@ To test the app locally, the terminal within VScode was used. The steps to run t
 * Hit the 'open browser' button or visit ```http://localhost:8000/``` in the browser.
 * Use the website as usual.
 
-A local database was used for most of the local deployment usage, since it was necessary for the automated tests to run. However, the switch to using the production database could be easily made, in case migrations needed to be performed or otherwise. Furthermore, in the development version, DEBUG was set to False, so error messages would show follow.
+The local database db_sqlite3 was used for most of the local deployment process, since it was easier to reset migrations in case of misatakes or a change of mind during the development process. However, in the development version, DEBUG was set to True, so that error messages would show.
 
 ### Production Deployment Initial
 
-Before starting work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. The following steps needed to be performed:
+Before starting work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. I did however run into difficulties anyways with my static files and cloudinary, but the tutors of Code Institute helped me fix these issues. The following steps were performed for deployment:
 
 #### Create Heroku app:
 
@@ -425,13 +396,17 @@ Before starting work, the project was deployed to Heroku. This was done early in
 * Give the new app a name and click "Create new app".
 * Select a region (Europe for this app).
 
-#### Connect Postgres Database:
+#### Connect ElephantSQL Database:
 
-* Open your app on the main dashboard of Heroku.
-* Open the Resources tab and scroll to the add-ons section.
-* Type 'Postgres' and select the Heroku Postgres option.
-* Copy the DATABASE_URL in the Config Vars section of the Settings tab.
-* To use the Postgres database in your development environment, copy the DATABASE_URL in your env.py file.
+* Log in to ElephantSQL.com to access your dashboard
+* Click “Create New Instance”
+* Set up your plan: Project name, Select the Tiny Turtle (Free) plan
+* Select “Select Region” (EU-North-1 (Stockholm)) for this app
+* Then click “Review”
+* Click “Create instance”
+* Return to the ElephantSQL dashboard and click on the database instance name for this project
+* In the URL section, click the copy icon to copy the database URL
+* Set up an os.environ["DATABASE_URL"]="<copiedURL>" in the env.py file
 
 #### Deploy App on Heroku:
 
@@ -439,24 +414,13 @@ Before starting work, the project was deployed to Heroku. This was done early in
 * Navigate to the "Config Vars" section and click "Reveal Config Vars"
 * Add SECRET_KEY variable
 * Add CLOUDINARY_URL variable
-* Add AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY variables.
+* Add DATABASE_URL variables
+* Add PORT 8000 variable
+* Add DISABLE_COLLECTSTATIC : 1 (until final deployment, then delete that config var)
 * Under "Deployment Method" click on "GitHub" to get access to your repository.
 * Enable Automatic Deploys" or click "Deploy Branch" to deploy your app.
 
-### Production Deployment Update
-
-Since Heroku stopped offering free tiers on the 28th of november 2022, it was necessary to make a few adjustments to the whole production deployment of the app. 
-
-#### PostgreSQL database:
-
-The Postgres database add-on that was previously used within Heroku was now no longer free and thus a different service had to be used. The choice went to [ElephantSQL](https://www.elephantsql.com/), since they offer a free tier. A [script](https://github.com/Code-Institute-Org/postgres-migration-tool) written by Code Institutes team was used to copy the original database to the new database. The steps are described in the [github readme](https://github.com/Code-Institute-Org/postgres-migration-tool) of that script.
-
-After that, the steps were as follows:
-
-* remove database add on from Heroku.
-* remove old DATABASE_URL config var from settings and post new url from ElephantSQL database in its place.
-* transform app from free tier to an eco dyno.
 
 ## Acknowledgements
 
-This website was built as part of the Full Stack Software Development course from Code Institute. I would like to thank my mentor Adeye Adegbenga, for his excellent feedback and guidance throughout the development of the project. I would also like to thank friends and family, who all took a look at the finished project to make sure it worked well and checked if I could improve things.
+This website was built as part of the Full Stack Software Development course from Code Institute. I would like to thank my mentor Andre Aquilina, for his excellent feedback, guidance, patience and ability to explain things in ways I understand throughout the development of the project. I would also like to thank friends and family, who all took a look at the finished project to make sure it worked well and checked if I could improve things.
