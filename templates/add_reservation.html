@@ -3,41 +3,33 @@
 {% block content %}
 
 {% if user.is_authenticated %}
-            {% if submitted %}
-        <div class="reservation-made text-center">
-            <h4>Your reservation is now made. We look forward to seeing you!</h4>
-        </div>
-            {% else %}
+{% if submitted %}
+<div class="reservation-made text-center">
+    <h4>Your reservation is now made. We look forward to seeing you!</h4>
+</div>
+{% else %}
+
 
 <section id="book-a-table" class="book-table">
     <div class="container" data-aos="fade-up">
-        <br><br>
-
-        <div class="card text-center make-reservation">
-            <div class="card-header">
-                <h2>Make a Reservation at One of Our Restaurants!</h2>
-            </div>
-            <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text">
-                    
-                        {{ form.media }}
-                        <form action="" method="POST" class="form-group reservation">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <input type="submit" value="Submit" class="btn btn-outline-success"><a
-                                href="{% url 'bookings' %}"></a>
-                        
-                </p> 
-            </div>
+        <br><br><br>
+        <div class="make-reservation text-center">
+            <h3>Make a Reservation at One of Our Restaurants!</h3>
         </div>
-        <br>
+        {{ form.media }}
+        <form action="" method="POST" class="form-group">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <input type="submit" value="Submit" class="btn btn-outline-success"><a href="{% url 'bookings' %}"></a>
+
+            </p>
     </div>
+    
 </section>
 
 {% endif %}
 
-            <br><br>
-            {% endif %}
+<br><br>
+{% endif %}
 
-            {% endblock %}
+{% endblock %}

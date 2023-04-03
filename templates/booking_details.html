@@ -19,10 +19,10 @@
         <strong>Additional Comment:</strong>
         {{ booking.comment }}<br></p>
       <a href="{% url 'update-booking' booking.pk %}" class="btn btn-outline-success">Edit</a>
-      <a href="{% url 'delete-booking' booking.pk %}" class="btn btn-outline-warning">Delete</a> 
+      <a href="{% url 'delete-booking' booking.pk %}" class="btn btn-outline-dark">Delete</a> 
       <br>
       <hr>
-      <a href="{% url 'bookings' %}" class="btn btn-success">Back</a>
+      <a href="{% url 'bookings' %}" class="btn btn-back">Back</a>
       </div>
       
   </div>

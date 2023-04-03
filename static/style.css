@@ -49,18 +49,6 @@ h6 {
   }
 }
 
-/*--------------
-# Index page
----------------*/
-
-.index-page {
-  min-height: 100%;
-  position: relative;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371105/static/assets/img/about.e644dbf1976d.jpg") no-repeat center center fixed;
-  box-shadow: inset 0 0 0 1000px rgba(0,0,0,.5);
-  background-size: cover;
-}
-
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
@@ -456,8 +444,7 @@ h6 {
 }
 
 #hero .btn-menu,
-#hero .btn-book,
-.btn-back {
+#hero .btn-book {
   font-weight: 600;
   font-size: 13px;
   letter-spacing: 0.5px;
@@ -472,10 +459,27 @@ h6 {
 }
 
 #hero .btn-menu:hover,
-#hero .btn-book:hover, 
-.btn-back:hover {
+#hero .btn-book:hover {
   background: #cda45e;
   color: #fff;
+}
+
+.btn-back {
+  background: #cda45e;
+  color: #f6f5f5;
+}
+
+.btn-back:hover {
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  transition: 0.3s;
+  line-height: 1;
+  color: white;
+  border: 2px solid #cda45e;
 }
 
 #hero .btn-book {
@@ -776,72 +780,46 @@ section {
   color: #fff;
 }
 
-/*-------------------------
-# Vivid Fusion Cards
--------------------------*/
+/*--------------
+# Index page
+---------------*/
 
-.card-header {
-  text-shadow: rgba(234, 251, 243, 0.856) 1px 0 3px;
+.index-page {
+  min-height: 100%;
+  position: relative;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680468035/static/assets/img/my-img/index-page.3aee087cd39e.jpg") no-repeat center center fixed;
+  box-shadow: inset 0 0 0 1000px rgba(35, 35, 35, 0.775);
+  background-size: cover;
 }
-
-.booking-card {
-  display: flex;
-  flex-direction: column;
-  max-width: 40rem;
-  background-color: rgba(255, 247, 227, 0.51);
-  padding: 0 1rem;
-}
-
-.details, .update, .delete {
-  max-width: 50%;
-  background-color: rgba(255, 247, 227, 0.51);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-
-.logout, .login-card, .signup-card {
-  max-width: 50%;
-  background-color: rgba(14, 10, 3, 0.587);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1rem;
-}
-
-.make-reservation {
-  max-width: 60%;
-  background-color: rgba(255, 247, 227, 0.51);
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0.5rem 2rem;
-  padding: 0 1rem;
-}
-
-.card-body {
-  background-color: rgba(253, 251, 248, 0.573);
-  margin-bottom: 2rem;
-  border-radius: 10px;
-}
-
-/*
-.card-img-top {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-*/
 
 /*--------------------------------------------------------------
 # Book A Table
 --------------------------------------------------------------*/
 
-.book-a-table {
-  background: url("../static/assets/img/my-img/booking-background.jpg") center center;
-  background-size: cover;
+.make-reservation {
+  display: flex;
+  justify-content: center;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
-  padding: 80px 0;
+  padding: 30px 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(14, 20, 15, 0.6);
+  border-bottom: 1rem;
+
 }
 
+.form-group {
+margin-left: auto;
+margin-right: auto;
+padding: 1.9rem;
+color: #fff;
+background-color: rgba(169, 169, 169, 0.6);
+max-width: 35rem;
+border-top: 1rem;
+}
+
+/*---
 .form-group {
   margin-left: auto;
   margin-right: auto;
@@ -850,62 +828,35 @@ section {
   background-color: rgb(14 10 3 / 66%);
 }
 
-.book-a-table .form-group {
+.book-table .form-group {
   padding-bottom: 20px;
+  padding: ;
 }
 
-
-
-
-/*
-.book-a-table .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.book-a-table .error-message {
-  display: none;
+.make-reservation {
+/*  max-width: 60%;
+  padding: 0.5rem 3rem; 
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(14, 10, 3, 0.587);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.9rem;
   color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
+  max-width: 25rem;
 }
-
-.book-a-table .error-message br+br {
-  margin-top: 25px;
-}
-
-.book-a-table .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.book-a-table .loading {
-  display: none;
-  text-align: center;
-  padding: 15px;
-}
-
-.book-a-table .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #cda45e;
-  border-top-color: #1a1814;
-  animation: animate-loading 1s linear infinite;
+  
+  
 }
 */
+
+@media (max-width: 300px) {
+
+  .book-table {
+      width: 100%;
+  }
+
+}
 
 .book-a-table input,
 .book-a-table .php-email-form textarea,
@@ -938,23 +889,6 @@ section {
   height: 44px;
 }
 
-.book-a-table .php-email-form textarea {
-  padding: 10px 12px;
-}
-
-.book-a-table .php-email-form button[type=submit] {
-  background: #cda45e;
-  border: 0;
-  padding: 10px 35px;
-  color: #fff;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.book-a-table .php-email-form button[type=submit]:hover {
-  background: #d3af71;
-}
-
 
 
 /*------------
@@ -972,6 +906,90 @@ section {
   box-shadow: inset 0 0 0 1000px rgba(14, 20, 15, 0.6);
   border-radius: 2rem;
 }
+
+
+/*-------------------------
+# Vivid Fusion Cards
+-------------------------*/
+
+.card-header, .card-title {
+  text-shadow: rgba(234, 251, 243, 0.856) 1px 0 3px;
+  color: #000000;
+}
+
+.card-header h3 {
+  color: white;
+  text-shadow: rgba(52, 65, 59, 0.856) 1px 0 3px;
+}
+
+.booking-card {
+  display: flex;
+  flex-direction: column;
+  max-width: 40rem;
+  background-color: rgba(255, 247, 227, 0.51);
+  padding: 0 1rem;
+}
+
+.update {
+  max-width: 50%;
+  background-color: rgba(255, 247, 227, 0.51);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.update-reservation {
+  display: flex;
+  justify-content: center;
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  padding: 30px 2rem;
+  box-shadow: inset 0 0 0 1000px rgba(14, 20, 15, 0.6);
+  border-bottom: 1rem;
+
+}
+
+.update-form {
+margin-left: auto;
+margin-right: auto;
+padding: 1.9rem;
+color: #fff;
+background-color: rgba(169, 169, 169, 0.6);
+max-width: 35rem;
+border-top: 1rem;
+}
+
+
+.update-form textarea,
+.update-form input.date {
+  max-width: 90%;
+}
+
+.details, .delete {
+  max-width: 35rem;
+  background-color: rgba(255, 247, 227, 0.51);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.logout, .login-card, .signup-card {
+  max-width: 50%;
+  background-color: rgba(14, 10, 3, 0.587);
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+.card-body {
+  background-color: rgba(253, 251, 248, 0.573);
+  margin-bottom: 2rem;
+  border-radius: 10px;
+}
+
+
 
 /*--------------------------------------------------------------
 # Violet Fusion
@@ -1357,12 +1375,6 @@ footer {
   padding-top: 2rem
 }
 
-/*--
- text-align: center;
-  padding-top: 2rem 3rem;
-}
-*/
-
 .social-networks>li {
   display: inline;
 }
@@ -1402,6 +1414,7 @@ footer {
   .contact-info {
     font-size: 90%;
     padding-bottom: 5px;
+    padding-left: 10px;
   }
 
 }
@@ -1417,3 +1430,13 @@ footer {
   }
 }
 
+
+/*----------------
+# Error
+-----------------*/
+
+.error h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
