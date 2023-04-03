@@ -219,9 +219,9 @@ This page is also only reachable once logged in as it contains sensitive informa
 
 #### Signup page
 
-After user scrolls down a bit, they will see the highlighted treatments. Clicking on the element will bring them to the treatments page, where they can read more about the treatment. Clicking on the book button will bring them to the book page.
+The signup page is what it sounds like, the page where a potential user can sign up for an account!
 
-![home-treatments](static/images/home-treatments.png)
+![signup page](static/images/home-treatments.png)
 
 #### About
 

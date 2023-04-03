@@ -90,9 +90,9 @@ class BookingDetail(DetailView):
 
 
 class UpdateBooking(UpdateView):
-        model = Booking
-        template_name = 'update_booking.html'
-        fields = ['date', 'time', 'guests', 'comment']
+    model = Booking
+    template_name = 'update_booking.html'
+    fields = ['date', 'time', 'guests', 'comment']
 
 
 class DeleteBooking(DeleteView):

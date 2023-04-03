@@ -65,7 +65,8 @@ class Booking(models.Model):
         ordering = ['date']
 
     def __str__(self):
-        return "Booking for {guests} guests at {restaurant} on {date} at {time}".format(
+        return "Booking for {guests} guests at {restaurant} on "
+        "{date} at {time}".format(
             guests=self.guests,
             restaurant=self.restaurant,
             date=self.date,
