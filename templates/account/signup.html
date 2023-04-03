@@ -7,15 +7,13 @@
 {% block content %}
 <br><br><br><br><br>
 
-<div class="card text-center signup-card">
-  <div class="card-header">
-    <h3>{% trans "Sign Up" %}</h3>
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">{% blocktrans %}Welcome to Vivid Fusion. Do you already have an account? Then please <a class="link"
-      href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</h5>
-    <p class="card-text">
+<section id="book-a-table">
+  <div class="container" data-aos="fade-up">
 
+    <div id="register" class="signup-header text-center">
+      <h5>{% blocktrans %}Welcome to <span>Vivid Fusion</span>. Do you already have an account? Then please <a class="link"
+        href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</h5>
+    </div>
           <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form.as_p }}
@@ -24,36 +22,14 @@
             {% endif %}
     </p>
   </div>
-  <div class="card-footer text-body-secondary">
-    <button class="btn btn-signup right btn-outline-success" type="submit">{% trans "Sign Up" %} &raquo;</button>
-  </div>
+  <br>
+  <div class="d-grid gap-2 col-5 mx-auto">
+    <button class="btn btn-back" type="submit">{% trans "Sign Up" %} &raquo;</button>
+    </div>
+  
 </div>
 
 <br><br><br>
-<!--
 
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <h3>{% trans "Sign Up" %}</h3>
-
-      <p>{% blocktrans %}Welcome to Vivid Fusion Hello. Do you already have an account? Then please <a class="link"
-          href="{{ login_url }}">sign in</a> instead.{% endblocktrans %}</p>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 mt-3 offset-md-2">
-      <form class="signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="btn btn-signup right" type="submit">{% trans "Sign Up" %} &raquo;</button>
-      </form>
-    </div>
-  </div>
-</div>
--->
 
 {% endblock %}
