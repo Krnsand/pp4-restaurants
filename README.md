@@ -70,11 +70,11 @@ This project is built as part of the Code Institute Full Stack Software Developm
 
 ### Business Goals
 
-The main goal of this project is to give a user the ability to book appointments at the NailsbyFaar nail salon. User should also get a good feeling for the salon and know what to expect from the treatments. If the user books an appointment, they should be able to make updates to their appointments in a user dashboard.
+The main goal of this project is to give a user the ability to book appointments at the Vivid Fusion Restaurant Group. User should also get a good sense of the different restaurants the are included in this special group concept and know what to expect from each individual restaurant. When the user has made a reservation at one of the restaurants, they should be able to edit and delete said reservation on an account page.
 
 ### Target Audience
 
-It might be obvious, but the target audience of this website is people who love getting their nails done! There isn't much more to be said about it, it can be people who go get their nails done for the first time, people who've gotten their nails done hundreds of times or people who are recurring customers at this specific salon. As long as they like pretty nails!
+The target audience is anyone who likes food and would enjoy a concept like this, where they have all the information they might need in one place as well as a broad variety of food to try.
 
 ### User Stories
 
