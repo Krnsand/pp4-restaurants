@@ -1,6 +1,6 @@
 /**
-* Much of my CSS code is copied from this template. 
-* I have written comments on the parts I have styled.
+* Much of my CSS code is copied from this template, though I have altered it and added new pages and 
+* cards which I have styled. See comments on the template styles.
 
 * Template Name: Restaurantly
 * Updated: Mar 10 2023 with Bootstrap v5.2.3
@@ -9,10 +9,8 @@
 * License: https://bootstrapmade.com/license/
 */
 
-
-
 /*--------------------------------------------------------------
-# General
+# General (layout from template)
 --------------------------------------------------------------*/
 
 body {
@@ -39,9 +37,9 @@ h6 {
   font-family: "Playfair Display", serif;
 }
 
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
+/*----------------------------------------------------------------------
+# Disable aos animation delay on mobile devices (layout from template)
+----------------------------------------------------------------------*/
 @media screen and (max-width: 768px) {
   [data-aos-delay] {
     transition-delay: 0 !important;
@@ -49,7 +47,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Back to top button
+# Back to top button (layout from template)
 --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
@@ -85,7 +83,7 @@ h6 {
 }
 
 /*---------------------------------------------------------------
-# Book a table button Menu
+# Book a table button Menu (layout from template)
 --------------------------------------------------------------*/
 .book-a-table-btn {
   margin: 0 0 0 15px;
@@ -113,7 +111,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Header
+# Header (layout from template)
 --------------------------------------------------------------*/
 #header {
   background: rgba(12, 11, 9, 0.6);
@@ -150,7 +148,7 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
+# Navigation Menu (layout from template)
 --------------------------------------------------------------*/
 /**
 * Desktop Navigation 
@@ -198,72 +196,6 @@ h6 {
   color: #d9ba85;
 }
 
-.navbar .dropdown ul {
-  display: block;
-  position: absolute;
-  left: 14px;
-  top: calc(100% + 30px);
-  margin: 0;
-  padding: 10px 0;
-  z-index: 99;
-  opacity: 0;
-  visibility: hidden;
-  background: #fff;
-  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
-  transition: 0.3s;
-  border-radius: 4px;
-}
-
-.navbar .dropdown ul li {
-  min-width: 200px;
-}
-
-.navbar .dropdown ul a {
-  padding: 10px 20px;
-  color: #444444;
-}
-
-.navbar .dropdown ul a i {
-  font-size: 12px;
-}
-
-.navbar .dropdown ul a:hover,
-.navbar .dropdown ul .active:hover,
-.navbar .dropdown ul li:hover>a {
-  color: #cda45e;
-}
-
-.navbar .dropdown:hover>ul {
-  opacity: 1;
-  top: 100%;
-  visibility: visible;
-}
-
-.navbar .dropdown .dropdown ul {
-  top: 0;
-  left: calc(100% - 30px);
-  visibility: hidden;
-}
-
-.navbar .dropdown .dropdown:hover>ul {
-  opacity: 1;
-  top: 0;
-  left: 100%;
-  visibility: visible;
-}
-
-
-@media (max-width: 1366px) {
-  .navbar .dropdown .dropdown ul {
-    left: -90%;
-  }
-
-  .navbar .dropdown .dropdown:hover>ul {
-    left: -100%;
-  }
-}
-
-*/
 /**
 * Mobile Navigation 
 */
@@ -337,9 +269,9 @@ h6 {
   margin: 15px;
 }
 
-/*----------------
-# Viktor
------------------*/
+/*------------------------
+# Media queries are mine
+--------------------------*/
 
 @media (max-width: 991px) {
   #header > .container-fluid {
@@ -358,20 +290,12 @@ h6 {
   .book-a-table-btn {
     margin: 0 0 0 15px;
     color: white;
-  /*  border: 2px solid #cda45e;
-    border-radius: 50px;
-    padding: 8px 25px;
-    text-transform: uppercase;
-    font-size: 13px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    transition: 0.3s; */
   }
 }
 
 
 /*--------------------------------------------------------------
-# Hero Section
+# Hero Section (layout from template)
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
@@ -511,10 +435,8 @@ h6 {
   }
 }
 
-
-
 /*--------------------------------------------------------------
-# Sections General
+# Sections General (layout from template)
 --------------------------------------------------------------*/
 section {
   padding: 60px 0;
@@ -567,9 +489,8 @@ section {
   }
 }
 
-
 /*--------------------------------------------------------------
-# About
+# About (layout from template)
 --------------------------------------------------------------*/
 .about {
   background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371105/static/assets/img/about.e644dbf1976d.jpg");
@@ -645,7 +566,6 @@ section {
 }
 
 .about .content ul {
-  list-style: none;
   padding: 0;
 }
 
@@ -670,7 +590,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# restaurants
+# Restaurants (layout from template)
 --------------------------------------------------------------*/
 .restaurants .box {
   padding: 50px 30px;
@@ -753,14 +673,6 @@ max-width: 35rem;
 border-top: 1rem;
 }
 
-@media (max-width: 300px) {
-
-  .book-table {
-      width: 100%;
-  }
-
-}
-
 .book-a-table input,
 .book-a-table .php-email-form textarea,
 .book-a-table select,
@@ -798,8 +710,6 @@ border-top: 1rem;
     margin-top: 3rem;
   }
 }
-
-
 
 /*----------------------
 # Reservation Made
@@ -940,7 +850,7 @@ text-align: center;
 }
 
 /*--------------------------------------------------------------
-# Violet Fusion
+# Violet Fusion (layout from template)
 -------------------------------------------------------*/
 
 #violet {
@@ -1056,12 +966,12 @@ text-align: center;
 }
 
 /*--------------------------------------------------------------
-# Green Dining
+# Green Dining (layout from template)
 -------------------------------------------------------*/
 #green {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680371091/static/assets/img/my-img/green-hero.db66e59d97e3.jpg") top center;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680530090/static/assets/img/my-img/green-hero1.28a9bd684dc6.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -1171,7 +1081,7 @@ text-align: center;
 }
 
 /*--------------------------------------------------------------
-# Orange Cushion
+# Orange Cushion (layout from template)
 -------------------------------------------------------*/
 
 #orange {
@@ -1287,7 +1197,7 @@ text-align: center;
 }
 
 /*--------------------------------------------------------------
-# Gallery
+# Gallery (from template)
 --------------------------------------------------------------*/
 .gallery .gallery-item {
   overflow: hidden;
@@ -1303,8 +1213,9 @@ text-align: center;
   transform: scale(1.1);
 }
 
---------------------------------------------------------------*/
-/* footer */
+/*------------------------------------
+ footer 
+---------------------------------*/
 
 footer {
   height: 10rem;
@@ -1447,8 +1358,3 @@ footer {
   background: #cda45e;
   color: #f6f5f5;
 }
-
-
- 
-  
-
