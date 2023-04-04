@@ -3,7 +3,7 @@
 
 ![Multi screen mockup](static/assets/img/README-img/responsive-1.png)
 
-This project is built as part of the Code Institute Full Stack Software Development course. I decided to make an app that would make dining and choosing restaurants a little bit easier for some people. Important note: this is not an actual live site that exists out in the world, it is used purely as a project for Code Institute and users can make reservations freely (you won't be expected to show up at any restaurants).
+This project is built as part of the Code Institute Full Stack Software Development course. I decided to make an app that would make dining and choosing restaurants a little bit easier. Important note: this is not an actual live site that exists out in the world, it is used purely as a project for Code Institute and users can make reservations freely (you won't be expected to show up at any restaurants).
 
 ## Live Site
 
@@ -69,7 +69,7 @@ This project is built as part of the Code Institute Full Stack Software Developm
 
 ### Business Goals
 
-The main goal of this project is to give a user the ability to make reservations at the Vivid Fusion Restaurant Group. Users should also get a good sense of the different restaurants the are included in this special group concept and know what to expect from each individual restaurant. When the user has made a reservation at one of the restaurants, they should be able to edit and delete said reservation on an account page.
+The main goal of this project is to give a user the ability to make reservations at the Vivid Fusion Restaurant Group. Users should also get a good sense of the different restaurants that are included in this special group concept and know what to expect from each individual restaurant. When the user has made a reservation at one of the restaurants, they should be able to edit and delete said reservation on an account page.
 
 ### Target Audience
 
@@ -115,7 +115,7 @@ Updated database diagram:
 
 ### Wireframe
 
-Before I started working on the project, I tried to scetch up what I wanted the site to look like. As we can see it evoled a bit from that beginnings state, but I think we can see hints of inspiration in there, somewhere.
+Before I started working on the project, I tried to scetch up what I wanted the site to look like. As we can see it evoled a bit from that beginning state, but I think we can see hints of inspiration in there, somewhere.
 
 Initial app wireframe:
 
@@ -129,7 +129,7 @@ Initial app wireframe:
 
 ![wireframe footer](static/assets/img/README-img/footer-contact-wire.png)
 
-Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and forgot password pages and functionality and creating the User model and User Manager model. For the purposes of this project, I decided that the 'AllAUth' packaged templates were just fine, I would however in the fututre like to override them and make something on my own. 
+Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and logout pages and functionality and creating the User model and User Manager model. For the purposes of this project, I decided that the 'AllAUth' packaged templates were just fine, I would however in the future like to override them and make something on my own. 
 
 My models are as followed:
 
@@ -177,7 +177,7 @@ The restaurant boxes are links to the different restaurants where the user is in
 
 ![restaurants boxes](static/assets/img/README-img/restaurants.png)
 
-The gallery shows some pictures "from the restaurants" (these aren't real restaurants if that was wasn't clear) to give the users a welcoming feel and tickle their intrerest into making a reservation
+The gallery shows some pictures "from the restaurants" to give the users a welcoming feel and tickle their intrerest into making a reservation
 
 ![gallery](static/assets/img/README-img/gallery.png)
 
@@ -218,7 +218,7 @@ This page is also only reachable once logged in as it contains sensitive informa
 
 #### Edit page
 
-On this page the user can edit their reservations. The fields that can be edited are, time, date, number of guests and the comment. If the user wants to change the restaurant they will have to delete the reservation make a new one instead.
+On this page the user can edit their reservations. The fields that can be edited are, time, date, number of guests and the comment. If the user wants to change the restaurant, they will have to delete the reservation and make a new one instead.
 
 ![edit page](static/assets/img/README-img/update.png)
 
@@ -322,7 +322,7 @@ Here the admin can view all the bookings and filter after the list on the right
 
 Here the admin can make a new booking in the panel
 
-![admin](static/assets/img/README-img/admin-add.booking.png)
+![admin](static/assets/img/README-img/admin-add-booking.png)
 
 
 ### Future Features
@@ -336,7 +336,7 @@ A future feature I would like to implement is the ability to check availability 
 
 * [Codemy.com on Youtube](https://www.youtube.com/@Codemycom) - for the styling of forms as well as linking bookings to specific users.
 * [AOS](https://michalsnik.github.io/aos/) - for making the dispay-delay easy 
-* [Restaurantly](https://themewagon.com/themes/free-bootstrap-5-html-5-restaurant-website-template-restaurantly/) - a bootstrap template whos layout I liked but could not use straight up as it did not work well with django. I ended up copying sections of code to use in my project, specifically the home page layout an navbar.
+* [Restaurantly](https://themewagon.com/themes/free-bootstrap-5-html-5-restaurant-website-template-restaurantly/) - a bootstrap template whos layout I liked but could not use straight up as it did not work well with django. I ended up copying sections of code to use in my project, specifically the home page layout and navbar.
 
 ### Images
 
