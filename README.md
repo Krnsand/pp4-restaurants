@@ -1,7 +1,7 @@
 
 ## Portfolio Project 4: Full Stack Toolkit
 
-![Multi screen mockup](static/images/multi-device-mockup.png)
+![Multi screen mockup](static/assets/img/README-img/responsive-1.png)
 
 This project is built as part of the Code Institute Full Stack Software Development course. I decided to make an app that would make dining and choosing restaurants a littl bit easier for some people. Important note: this is not an actual live site that exists out in the world, it is used purely as a project for Code Institute and users can make reservations freely (you won't be expected to show up at any restaurants).
 
@@ -93,7 +93,7 @@ And the user stories board after finishing the project:
 
 ![user stories board updated](static/assets/img/README-img/board-done.png)
 
-As you can see there are three stories left, none of them were Must-Haves however so I felt ok with leaving them behing. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)
+As you can see there are three stories left, none of them were Must-Haves however so I felt ok with leaving them behing. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/Krnsand/projects/4)
 
 
 ### Structure of the app
@@ -158,33 +158,33 @@ The about page is meant to introduce the user to the restaurant concept as well 
 
 The restaurant boxes are links to the different restaurants where the user is introduced a little bit more to the individual restaurants as well as they allow the users to get a feel for the place, if it will be a place where they will find joy or not.
 
-![restaurants boxes](static/images/book-confirmation.png)
+![restaurants boxes](static/assets/img/README-img/restaurants.png)
 
 The gallery shows some pictures "from the restaurants" (these aren't real restaurants if that was wasn't clear) to give the users a welcoming feel and tickle their intrerest into making a reservation
 
-![gallery](static/images/book-confirmation.png)
+![gallery](static/assets/img/README-img/gallery.png)
 
 
 #### Make Reservation
 
 This page is just a reservations form. Here the user can choose which restaurant they want to make a reservation at, how many their party will consist of, at what date and time, as well as leave a comment if there is any addintional information the restaurant might need. 
 
-![reservations form](static/images/dashboard.png)
+![reservations form](static/assets/img/README-img/reservation-form.png)
 
 This page is only reachable once logged in as you need an account to make a reservation.
 
-![error message reservation](static/images/dashboard.png)
+![error message reservation](static/assets/img/README-img/reservation-error.png)
 
 Once a reservation has been made, the user gets a message to confirm the reservation.
 
-![reservations confirmed](static/images/dashboard.png)
+![reservations confirmed](static/assets/img/README-img/reservation-made.png)
 
 
 #### Bookings page
 
 Here the user is greeted with a page with all their bookings (if they have any yet) as neat little cards that they can click on to get the details about individual bookings. These reservation cards are listed in the order of the nearest date, so that the user  will know which of their many many lovely dinner reservations is next in line at all times.
 
-![bookings page](static/images/dashboard.png)
+![bookings page](static/assets/img/README-img/bookings.png)
 
 This page is only reachable once logged in as it contains sensitive information. If someone were to try to access it without being logged in, they will be directed to the signup page.
 
@@ -193,111 +193,120 @@ This page is only reachable once logged in as it contains sensitive information.
 
 The details page shows the user the details of ther reservations. The restaurant, the date and time, number of guests, as well as their comment if they decided to leave one. Here the user can also choose to edit or delete their reservations. There are buttons that will tak ethem to the next page, or back to their bookings page if they rather want that.
 
-![details page](static/images/nav-home.png)
+![details page](static/assets/img/README-img/details.png)
 
 This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
 
-![details error message](static/images/dashboard.png)
+![details error message](static/assets/img/README-img/error-remove.png)
 
 #### Edit page
 
 On this page the user can edit their reservations. The fields that can be edited are, time, date, number of guests and the comment. If the user wants to change the restaurant they will have to delete the reservation make a new one instead.
 
-![edit page](static/images/nav-other.png)
+![edit page](static/assets/img/README-img/update.png)
 
 This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
 
-![edit error message](static/images/dashboard.png)
+![edit error message](static/assets/img/README-img/error-remove.png)
 
 #### Delete page
 
 On this page the user can delete their reservation. It is shown with a message asking if the user is sure they want to delete. There is a back button as well in case the user does not want to delete the booking.
 
-![delete page](static/images/home-hero-image.png)
+![delete page](static/assets/img/README-img/delete.png)
 
 This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
 
-![delete error message](static/images/dashboard.png)
+![delete error message](static/assets/img/README-img/error-remove.png)
 
 #### Signup
 
 The signup page is what it sounds like, the page where a potential user can sign up for an account! If the user is a recurring user, there is a link to the login page here as well.
 
-![signup page](static/images/home-treatments.png)
+![signup page](static/assets/img/README-img/signup.png)
 
 The form shows error messages in case the form is not filled out correctly.
 
-![signup errors](static/images/home-treatments.png)
+![signup errors](static/assets/img/README-img/signup-error.png)
 
 #### Login
 
 This page is where an already user can log into their account! If they for some reason don't already have an account, there is a link to the signup page here as well.
 
-![login](static/images/home-about.png)
+![login](static/assets/img/README-img/login.png)
 
 The form shows error messages in case the username and password do not match.
 
-![login errors](static/images/home-treatments.png)
+![login errors](static/assets/img/README-img/login-error.png)
 
 #### Logout
 
 This is the logout page, the user is asked if they really want to log out.
 
-![logout](static/images/home-footer.png)
+![logout](static/assets/img/README-img/logout.png)
 
 #### Navbar
 
 The navbar is visable on all pages for easy navigation. When logged in there is a "book a table" button in the navbar
 
-![navbar in](static/images/about.png)
+![navbar in](static/assets/img/README-img/navbar-in.png)
 
 But when the user is not logged in, it is not possible to book a table
 
-![navbar out](static/images/about.png)
+![navbar out](static/assets/img/README-img/navbar-out.png)
 
 #### Footer
 
 The footer holds the contact information to the restaurant group Vivid Fusion. For now they handle all reservations and question, until the restaurants themselves are more self sufficient on that front.
 
-![footer](static/images/treatments.png)
+![footer](static/assets/img/README-img/footer-contact.png)
 
 #### Violet Fusion 
 
 This is the "Home Page" of Violet Fusion, the first restaurant in this group. Here the user can read a little bit about it before choosing to make a reservation.
 
-![violet](static/images/gallery.png)
+![violet](static/assets/img/README-img/violet-hero.png)
 
-![violet-about](static/images/gallery-insta.png)
+![violet-about](static/assets/img/README-img/violet-about.png)
 
 #### Green Dining
 
 This is the "Home Page" of Green Dining, the second restaurant in this group. Here the user can read a little bit about it before choosing to make a reservation.
 
-![green](static/images/gallery.png)
+![green](static/assets/img/README-img/green-hero.png)
 
-![green-about](static/images/gallery-insta.png)
+![green-about](static/assets/img/README-img/green-about.png)
 
 #### Orange Cushion
 
 This is the "Home Page" of Orange Cushion, the third and last (so far) restaurant in this group. Here the user can read a little bit about it before choosing to make a reservation.
 
-![orange](static/images/gallery.png)
+![orange](static/assets/img/README-img/orange-hero.png)
 
-![orange-about](static/images/gallery-insta.png)
+![orange-about](static/assets/img/README-img/orange-about.png)
 
 
 #### Error 404
 
 This is an error page where the user has clicked on a page that is currently unavailable.
 
-![error](static/images/logout.png)
+![error](static/assets/img/README-img/error.png)
 
 
 #### Admin
 
 Site owner has a lot of control over the website and database entries via the admin panel. If they login as a superuser, they can edit/delete/add a whole range of objects:
 
-![admin](static/images/admin.png)
+![admin](static/assets/img/README-img/admin-users.png)
+
+Here the admin can view all the bookings and filter after the list on the right
+
+![admin](static/assets/img/README-img/admin-bookings.png)
+
+Here the admin can make a new booking in the panel
+
+![admin](static/assets/img/README-img/admin-add.booking.png)
+
 
 ### Future Features
 
@@ -314,7 +323,7 @@ A future feature I would like to implement is the ability to check availability 
 
 ### Images
 
-All images used in the readme are screenshots of the project and a multi device mock up generated with [mockup generator](https://techsini.com/multi-mockup/index.php)
+All images used in the readme are screenshots of the project and a multi device mock up generated with [mockup generator](https://ui.dev/amiresponsive)
 All images inside the app are royalty free stock imagery.
 
 ### Technologies used
@@ -354,7 +363,7 @@ All images inside the app are royalty free stock imagery.
 
 [PEP8 and black](https://pypi.org/project/black/) - used to format python.
 
-[Multi Device Website Mockup Generator](https://techsini.com/multi-mockup/index.php) - to create an image of the website shown on different devices.
+[Multi Device Website Mockup Generator](https://ui.dev/amiresponsive) - to create an image of the website shown on different devices.
 
 ## Testing
 
