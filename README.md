@@ -11,14 +11,13 @@ This project is built as part of the Code Institute Full Stack Software Developm
 
 ## Github Repository
 
-[PortfolioProjectFour](https://github.com/DOdrums/PortfolioProjectFour)
+[PortfolioProjectFour](https://github.com/Krnsand/pp4-restaurants)
 
 
 <!-- TOC -->
 
-- [Smart House Inventory](#smart-house-inventory)
-    - [Portfolio Project 4: Full Stack Toolkit](#portfolio-project-4-full-stack-toolkit)
-    - [Live Site](#live-site)
+    
+- [Live Site](#live-site)
     - [Github Repository](#github-repository)
     - [UX](#ux)
         - [Business Goals](#business-goals)
@@ -30,18 +29,19 @@ This project is built as part of the Code Institute Full Stack Software Developm
         - [Features](#features)
             - [Home Page](#home-page)
             - [Make a Reservation](#make-reservation)
-            - [Bookings](#bookings)
-            - [Details](#details)
-            - [Edit](#edit)
-            - [Delete](#delete)
+            - [Bookings Page](#bookings-page)
+            - [Details Page](#details-page)
+            - [Edit Page](#edit-page)
+            - [Delete Page](#delete-page)
             - [Signup](#signup)
             - [Login](#login)
             - [Logout](#logout)
             - [Navbar](#navbar)
             - [Footer](#footer)
-            - [Violet](#violet)
-            - [Green](#green)
-            - [Orange](#orange)
+            - [Violet Fusion](#violet-fusion)
+            - [Green Dining](#green-dining)
+            - [Orange Cushion](#orange-cushion)
+            - [Error 404](#error)
             - [Admin](#admin)
         - [Future Features](#future-features)
     - [Credits](#credits)
