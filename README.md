@@ -329,6 +329,8 @@ Here the admin can make a new booking in the panel
 
 A future feature I would like to implement is the ability to check availability for tables at the different restaurants and in that way avoid double bookings.
 
+I would also like to clean it up a bit in the future, with a hamburger toggle icon for the navbar on smaller screens, a better datepicker for the forms for example.
+
 
 ## Credits
 
@@ -337,11 +339,18 @@ A future feature I would like to implement is the ability to check availability 
 * [Codemy.com on Youtube](https://www.youtube.com/@Codemycom) - for the styling of forms as well as linking bookings to specific users.
 * [AOS](https://michalsnik.github.io/aos/) - for making the dispay-delay easy 
 * [Restaurantly](https://themewagon.com/themes/free-bootstrap-5-html-5-restaurant-website-template-restaurantly/) - a bootstrap template whos layout I liked but could not use straight up as it did not work well with django. I ended up copying sections of code to use in my project, specifically the home page layout and navbar.
+* [Figma](https://www.figma.com/) - for the wireframe 
+* [Lucidchart](https://lucid.app/) - for the database diagram
 
 ### Images
 
 All images used in the README are screenshots of the project and a multi device mock up generated with [mockup generator](https://ui.dev/amiresponsive)
-All images inside the app are royalty free stock imagery.
+All images inside the app are royalty free stock imagery from
+
+* [Pexels](https://www.pexels.com/)
+and
+* [Pixaby](https://pixabay.com/)
+
 
 ### Technologies used
 
