@@ -67,4 +67,6 @@ I have tested the responsiveness on multiple sites and they all look nice over t
 * I managed to mess up some part of deployment testing very close to deadline that made my deployed site not receive my static files, thus not looking very good completely unstyled. I was able to fix this together with tutor support.
 * A still existing bug, is that I havn't been able to get the Placeholder text to show on some of the formfields in the reservation form. I'm going to look into that until the next project.
 * I don't know if it could be considered a bug or a miss on my end, but one thing not working is setting the number of guests field to be required in the reservations form, so it is possible for users to make reservations without any guests. It is however possible to add guests on the edit page.
-* Final unfixed and biggest bug: I got an "e-tag" on images that made them not show up on the live site.... I spent hours with tutor support trying to fix this but was ultimatly unsuccessfull..... will definitely try to work through this better next time
+* Final unfixed and biggest bug: I got an "e-tag" on images that made them not show up on the live site.... I spent hours with tutor support trying to fix this but was ultimatly unsuccessfull..... will definitely try to work through this better next time.
+
+![e-tag](static/assets/img/README-img/e-tag.png)
