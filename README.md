@@ -412,11 +412,11 @@ To test the app locally, the terminal within VScode was used. The steps to run t
 * Hit the 'open browser' button or visit ```http://localhost:8000/``` in the browser.
 * Use the website as usual.
 
-The local database db_sqlite3 was used for most of the local deployment process, since it was easier to reset migrations in case of misatakes or a change of mind during the development process. However, in the development version, DEBUG was set to True, so that error messages would show.
+The local database db_sqlite3 was used for most of the local deployment process, since it was easier to reset migrations in case of mistakes or a change of mind during the development process. However, in the development version, DEBUG was set to True, so that error messages would show.
 
 ### Production Deployment Initial
 
-Before starting work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. I did however run into difficulties anyways with my static files and cloudinary, but the tutors of Code Institute helped me fix these issues. The following steps were performed for deployment:
+Before starting the work, the project was deployed to Heroku. This was done early in the process, to prevent having to deal with difficulties of deployment close to the project deadline. I did however run into difficulties anyways with my static files and Cloudinary, but the tutors of Code Institute helped me fix these issues. The following steps were performed for deployment:
 
 #### Create Heroku app:
 
@@ -436,7 +436,7 @@ Before starting work, the project was deployed to Heroku. This was done early in
 * Click “Create instance”
 * Return to the ElephantSQL dashboard and click on the database instance name for this project
 * In the URL section, click the copy icon to copy the database URL
-* Set up an os.environ["DATABASE_URL"]="<copiedURL>" in the env.py file
+* Set up an os.environ["DATABASE_URL"]="<copiedURL>" in the env.py file in your Gitpod repository
 
 #### Deploy App on Heroku:
 
@@ -453,4 +453,4 @@ Before starting work, the project was deployed to Heroku. This was done early in
 
 ## Acknowledgements
 
-This website was built as part of the Full Stack Software Development course from Code Institute. I would like to thank my mentor Andre Aquilina, for his excellent feedback, guidance, patience and ability to explain things in ways I understand throughout the development of the project. I would also like to thank friends and family, who all took a look at the finished project to make sure it worked well and checked if I could improve things.
+This website was built as part of the Full Stack Software Development course from Code Institute. I would like to thank my mentor Andre Aquilina, for his excellent feedback, guidance, patience and ability to explain things in ways I understand throughout the development of the project. I would also like to thank friends and family, who all took the time to look at the finished project to make sure it worked well and checked if I could improve things.
