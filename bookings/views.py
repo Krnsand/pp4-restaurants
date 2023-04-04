@@ -100,7 +100,3 @@ class DeleteBooking(DeleteView):
     template_name = 'delete_booking.html'
     success_url = reverse_lazy('bookings')
 
-
-class Error(View):
-    def get(self, request):
-        return render(request, "404.html")

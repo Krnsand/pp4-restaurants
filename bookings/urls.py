@@ -9,7 +9,6 @@ from .views import (
     BookingDetail,
     UpdateBooking,
     DeleteBooking,
-    Error,
 )
 
 urlpatterns = [
@@ -22,5 +21,4 @@ urlpatterns = [
     path("bookings/<int:pk>", views.BookingDetail.as_view(), name="details"),
     path("bookings/edit/<int:pk>", views.UpdateBooking.as_view(), name="update-booking"),
     path("bookings/edit/<int:pk>/remove", views.DeleteBooking.as_view(), name="delete-booking"),
-    path("404", views.Error.as_view(), name="error"),
 ]
