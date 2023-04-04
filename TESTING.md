@@ -27,20 +27,20 @@ All HTML pages were run though the [nu-html-checker](https://validator.w3.org/).
 
 After closing a couple open divs there were no errors in my HTML
 
-![open div](static/imag/README-img/html.png)
+![open div](static/img/README-img/html.png)
 
 
 ### CSS
 
 The only error I got was a missing s on a display-delay class, after fixing that there were no errors
 
-![css-validator](static/imag/README-img/css.png)
+![css-validator](static/img/README-img/css.png)
 
 ### Javascript
 
 I did not write the js myself, this I copied from the before mentioned template. With this said, there were no errors, just warnings. All missing semicolons were added but the warnings I left be
 
-![js-validator](static/imag/README-img/javascript.png)
+![js-validator](static/img/README-img/javascript.png)
 
 ### Python
 
@@ -50,7 +50,7 @@ Editor suggestions for python formatting were used, using Black. A PEP8 max line
 
 Lighthouse was used on all pages. Almost all pages returned around 90 scores on all categories, however, there were a few mentions in the console about error messages being shown in the console. WIll look into this till next project.:
 
-![lighthouse-green](static/imag/README-img/lighthouse.png)
+![lighthouse-green](static/img/README-img/lighthouse.png)
 
 ## Browser Testing
 
@@ -62,7 +62,7 @@ The project was tested on a multitude of devices: several iPhones, android phone
 
 ## Manual Testing
 
-
+I have tested every button manually to make sure they all work as intended. I have tested to redirect my browser to different view paths from when being logged off to see if I can access those pages without being logged in, without success. 
 
 ## Bugs
 
