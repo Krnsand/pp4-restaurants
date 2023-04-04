@@ -8,7 +8,6 @@ from bootstrap_datepicker_plus.widgets import DatePickerInput, MonthPickerInput
 
 # Create a Restaurant booking form
 
-
 class RestaurantForm(forms.ModelForm):
     class Meta:
         model = Booking
