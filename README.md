@@ -112,6 +112,19 @@ Updated database diagram:
 
 ![database diagram](static/assets/img/README-img/diagram-new.png)
 
+### Wireframe
+
+Before I started working on the project, I tried to scetch up what I wanted the site to look like. As we can see it evoled a bit from that beginnings state, but I think one can see hints och inspiration in there, somewhere.
+
+Initial database diagram:
+
+![wireframe home](static/assets/img/README-img/welcome.png)
+
+![database diagram](static/assets/img/README-img/about-us.png)
+![database diagram](static/assets/img/README-img/restaurants-wireframe.png)
+![database diagram](static/assets/img/README-img/booking.png)
+![database diagram](static/assets/img/README-img/footer-contact-wire.png)
+
 Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and forgot password pages and functionality and creating the User model and User Manager model. For the purposes of this project, I decided that the 'AllAUth' packaged templates were just fine, I would however in the fututre like to override them and make something on my own. 
 
 My models are as followed:
