@@ -87,11 +87,11 @@ User stories were written with frequent restuarant goers in mind, as well as peo
 
 In the picture below you can see an example of the user stories before work on the project was started:
 
-![user stories board](static/images/user-stories-1.png)
+![user stories board](static/assets/img/README-img/project-board.png)
 
 And the user stories board after finishing the project:
 
-![user stories board updated](static/images/user-stories-2.png)
+![user stories board updated](static/assets/img/README-img/board-done.png)
 
 As you can see there are three stories left, none of them were Must-Haves however so I felt ok with leaving them behing. To view all the user stories in detail, visit the project page: [user stories board](https://github.com/users/DOdrums/projects/3/views/1)
 
@@ -106,11 +106,11 @@ The logic of the app was thought out by making a database diagram, to visualize 
 
 Initial database diagram:
 
-![database diagram](static/images/database-diagram.png)
+![database diagram](static/assets/img/README-img/diagram-first.png)
 
 Updated database diagram:
 
-![database diagram](static/images/database-diagram-updated.png)
+![database diagram](static/assets/img/README-img/diagram-new.png)
 
 Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and forgot password pages and functionality and creating the User model and User Manager model. For the purposes of this project, I decided that the 'AllAUth' packaged templates were just fine, I would however in the fututre like to override them and make something on my own. 
 
@@ -136,7 +136,7 @@ The User model:
 
 The color scheme of the site was inspired by the hero image that I really liked, see the image below. I feel it creates a coherent theme accross the site without being too repetitive. The forms are styled to collaborate with the navbar, darker and sleek. While the cards are meant to be more light and matched with the image with a more rounded feel to them.
 
-![color scheme](static/images/color-scheme.png)
+![color scheme](static/assets/img/README-img/colors.png)
 
 ### Features
 
@@ -146,11 +146,15 @@ The app's biggest feature is the home page. Read more about it in its section. T
 
 The home page has an about section, a gallery of images "from the restaurants", as well as a section where the user can click on each restaurant to go to their individual page if they want to know more about them before making a reservatoin. These pages are mostly just to give a brief introduction to the restaurants and give the user a feel for their atmosphere, not to be a complete restaurant website in itself.
 
-![home page](static/images/book.png)
+![home page logged out](static/assets/img/README-img/home-logout.png)
+
+And when logged in, a "Book a Table" button emerges
+
+![home page logged in](static/assets/img/README-img/home-in.png)
 
 The about page is meant to introduce the user to the restaurant concept as well as give a very brief explanation of what to be expected from the different restaurants
 
-![about page](static/images/book-selected-treatment.png)
+![about page](static/assets/img/README-img/home-about.png)
 
 The restaurant boxes are links to the different restaurants where the user is introduced a little bit more to the individual restaurants as well as they allow the users to get a feel for the place, if it will be a place where they will find joy or not.
 
