@@ -3,7 +3,7 @@
 
 ![Multi screen mockup](static/assets/img/README-img/responsive-1.png)
 
-This project is built as part of the Code Institute Full Stack Software Development course. I decided to make an app that would make dining and choosing restaurants a littl bit easier for some people. Important note: this is not an actual live site that exists out in the world, it is used purely as a project for Code Institute and users can make reservations freely (you won't be expected to show up at any restaurants).
+This project is built as part of the Code Institute Full Stack Software Development course. I decided to make an app that would make dining and choosing restaurants a little bit easier for some people. Important note: this is not an actual live site that exists out in the world, it is used purely as a project for Code Institute and users can make reservations freely (you won't be expected to show up at any restaurants).
 
 ## Live Site
 
@@ -25,6 +25,7 @@ This project is built as part of the Code Institute Full Stack Software Developm
         - [User Stories](#user-stories)
         - [Structure of the app](#structure-of-the-app)
         - [Logic/Database Diagram](#logicdatabase-diagram)
+        - [Wireframe](#wireframe)
         - [Color Scheme](#color-scheme)
         - [Features](#features)
             - [Home Page](#home-page)
@@ -68,7 +69,7 @@ This project is built as part of the Code Institute Full Stack Software Developm
 
 ### Business Goals
 
-The main goal of this project is to give a user the ability to book appointments at the Vivid Fusion Restaurant Group. User should also get a good sense of the different restaurants the are included in this special group concept and know what to expect from each individual restaurant. When the user has made a reservation at one of the restaurants, they should be able to edit and delete said reservation on an account page.
+The main goal of this project is to give a user the ability to make reservations at the Vivid Fusion Restaurant Group. Users should also get a good sense of the different restaurants the are included in this special group concept and know what to expect from each individual restaurant. When the user has made a reservation at one of the restaurants, they should be able to edit and delete said reservation on an account page.
 
 ### Target Audience
 
@@ -76,7 +77,7 @@ The target audience is anyone who likes food and would enjoy a concept like this
 
 ### User Stories
 
-User stories were written with frequent restuarant goers in mind, as well as people how might not go out too often. They were all written to fit within the agile methodology and they have the following criteria:
+User stories were written with frequent restuarant goers in mind, as well as people who might not go out too often. They were all written to fit within the agile methodology and they have the following criteria:
 
 * title
 * clear description
@@ -98,7 +99,7 @@ As you can see there are three stories left, none of them were Must-Haves howeve
 
 ### Structure of the app
 
-The app is designed to have be easily navigated, highly accessable from every page, as well as with a strong focus on the booking functionality. All pages include the booking button when the user is logged in. The home page specifically features a booking button right on top, as well as one right in the middle of the welcome image so it is easy to book whener the user feels inclined.
+The app is designed to be easily navigated, highly accessable from every page, as well as with a strong focus on the booking functionality. All pages include the booking button when the user is logged in. The home page specifically features a booking button right on top, as well as one right in the middle of the welcome image so it is easy to book whener the user feels inclined.
 
 ### Logic/Database Diagram
 
@@ -114,16 +115,19 @@ Updated database diagram:
 
 ### Wireframe
 
-Before I started working on the project, I tried to scetch up what I wanted the site to look like. As we can see it evoled a bit from that beginnings state, but I think one can see hints och inspiration in there, somewhere.
+Before I started working on the project, I tried to scetch up what I wanted the site to look like. As we can see it evoled a bit from that beginnings state, but I think we can see hints of inspiration in there, somewhere.
 
-Initial database diagram:
+Initial app wireframe:
 
 ![wireframe home](static/assets/img/README-img/welcome.png)
 
-![database diagram](static/assets/img/README-img/about-us.png)
-![database diagram](static/assets/img/README-img/restaurants-wireframe.png)
-![database diagram](static/assets/img/README-img/booking.png)
-![database diagram](static/assets/img/README-img/footer-contact-wire.png)
+![wireframe about](static/assets/img/README-img/about-us.png)
+
+![wireframe restaurants](static/assets/img/README-img/restaurants-wireframe.png)
+
+![wireframe booking](static/assets/img/README-img/booking.png)
+
+![wireframe footer](static/assets/img/README-img/footer-contact-wire.png)
 
 Django's Class-Based Generic Views were used, to build the models in an Object Oriented way. For the User model specifically, the Django package 'AllAuth' was used. This does a lot of the work for you, like creating unstyled login, sign-up and forgot password pages and functionality and creating the User model and User Manager model. For the purposes of this project, I decided that the 'AllAUth' packaged templates were just fine, I would however in the fututre like to override them and make something on my own. 
 
@@ -131,13 +135,13 @@ My models are as followed:
 
 The Restaurant model:
 
-* used to create restaurants in the admin panel to be viewed on the live site and bookable
+* used to create restaurants in the admin panel to be viewed on the live site and be bookable
 * displays the name of the restaurant, an adress as well as opening/closing times and if it is open on mondays and tuesdays or not
 
 The Booking model:
 
 * used to create bookings in the admin panel as well as to be used in a booking form on the live site
-* as the fields for restaurant, user, name, email, date, time, number of guests and for a comment if the user has any allergies or dietary restrictions the restaurant might need to know
+* as the fields for restaurant, user, name, email, date, time, number of guests and for a comment if the user has any allergies or dietary restrictions the restaurant might need to know about
 * was used to develop the reservations form on the site
 
 The User model:
@@ -153,11 +157,11 @@ The color scheme of the site was inspired by the hero image that I really liked,
 
 ### Features
 
-The app's biggest feature is the home page. Read more about it in its section. Then we have the "Book a table" page where the user can make areservation, and the bookings page where the user can view, edit and delete their resevations. The navbar is featured on all pages and from there the user can go to the booking page to make a reservation, their individual booking page where their reservations are listed, as well as log in or out.
+The app's biggest feature is the home page. Read more about it in its section. Then we have the "Book a table" page where the user can make a reservation, and the bookings page where the user can view, edit and delete their resevations. The navbar is featured on all pages and from there the user can go to the booking page to make a reservation, their individual booking page where their reservations are listed, as well as log in or out.
 
 #### Home page
 
-The home page has an about section, a gallery of images "from the restaurants", as well as a section where the user can click on each restaurant to go to their individual page if they want to know more about them before making a reservatoin. These pages are mostly just to give a brief introduction to the restaurants and give the user a feel for their atmosphere, not to be a complete restaurant website in itself.
+The home page has an about section, a gallery of images "from the restaurants", as well as a section where the user can click on each restaurant to go to their individual page if they want to know more about them before making a reservation. These pages are mostly just to give a brief introduction to the restaurants and give the user a feel for their atmosphere, not to be a complete restaurant website in itself.
 
 ![home page logged out](static/assets/img/README-img/home-logout.png)
 
@@ -180,7 +184,7 @@ The gallery shows some pictures "from the restaurants" (these aren't real restau
 
 #### Make Reservation
 
-This page is just a reservations form. Here the user can choose which restaurant they want to make a reservation at, how many their party will consist of, at what date and time, as well as leave a comment if there is any addintional information the restaurant might need. 
+This page is just a reservations form. Here the user can choose which restaurant they want to make a reservation at, how many their party will consist of, at what date and time, as well as leave a comment if there is any additional information the restaurant might need. 
 
 ![reservations form](static/assets/img/README-img/reservation-form.png)
 
@@ -204,11 +208,11 @@ This page is only reachable once logged in as it contains sensitive information.
 
 #### Details page 
 
-The details page shows the user the details of ther reservations. The restaurant, the date and time, number of guests, as well as their comment if they decided to leave one. Here the user can also choose to edit or delete their reservations. There are buttons that will tak ethem to the next page, or back to their bookings page if they rather want that.
+The details page shows the user the details of ther reservations. The restaurant, the date and time, number of guests, as well as their comment if they decided to leave one. Here the user can also choose to edit or delete their reservations. There are buttons that will take them to the next page, or back to their bookings page if they rather want that.
 
 ![details page](static/assets/img/README-img/details.png)
 
-This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
+This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they would get an error message.
 
 ![details error message](static/assets/img/README-img/error-remove.png)
 
@@ -218,7 +222,7 @@ On this page the user can edit their reservations. The fields that can be edited
 
 ![edit page](static/assets/img/README-img/update.png)
 
-This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
+This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they would get an error message.
 
 ![edit error message](static/assets/img/README-img/error-remove.png)
 
@@ -228,7 +232,7 @@ On this page the user can delete their reservation. It is shown with a message a
 
 ![delete page](static/assets/img/README-img/delete.png)
 
-This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they will get an error message.
+This page is also only reachable once logged in as it contains sensitive information and no one but the user should be able to access the bookings. If someone were to try to access it without being logged in, they would get an error message.
 
 ![delete error message](static/assets/img/README-img/error-remove.png)
 
@@ -270,7 +274,7 @@ But when the user is not logged in, it is not possible to book a table
 
 #### Footer
 
-The footer holds the contact information to the restaurant group Vivid Fusion. For now they handle all reservations and question, until the restaurants themselves are more self sufficient on that front.
+The footer holds the contact information to the restaurant group Vivid Fusion. For now they handle all reservations and questions, until the restaurants themselves are more self sufficient on that front.
 
 ![footer](static/assets/img/README-img/footer-contact.png)
 
@@ -332,11 +336,11 @@ A future feature I would like to implement is the ability to check availability 
 
 * [Codemy.com on Youtube](https://www.youtube.com/@Codemycom) - for the styling of forms as well as linking bookings to specific users.
 * [AOS](https://michalsnik.github.io/aos/) - for making the dispay-delay easy 
-* [Restaurantly](https://themewagon.com/themes/free-bootstrap-5-html-5-restaurant-website-template-restaurantly/) - a bootstrap template whos layout I liked but could not use straight up as it did not work well with django. I ended up copying sections of code to use in my project, see comments in code.
+* [Restaurantly](https://themewagon.com/themes/free-bootstrap-5-html-5-restaurant-website-template-restaurantly/) - a bootstrap template whos layout I liked but could not use straight up as it did not work well with django. I ended up copying sections of code to use in my project, specifically the home page layout an navbar.
 
 ### Images
 
-All images used in the readme are screenshots of the project and a multi device mock up generated with [mockup generator](https://ui.dev/amiresponsive)
+All images used in the README are screenshots of the project and a multi device mock up generated with [mockup generator](https://ui.dev/amiresponsive)
 All images inside the app are royalty free stock imagery.
 
 ### Technologies used
