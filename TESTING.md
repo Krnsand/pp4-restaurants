@@ -2,9 +2,7 @@
 
 - [Validator Testing](#validator-testing)
     - [HTML](#html)
-        - [Trailing slash](#trailing-slash)
         - [Unclosed div](#unclosed-div)
-        - [Bootstrap class outside of class tag](#bootstrap-class-outside-of-class-tag)
     - [CSS](#css)
     - [Javascript](#javascript)
     - [Python](#python)
@@ -12,7 +10,6 @@
 - [Browser Testing](#browser-testing)
 - [Device Testing](#device-testing)
 - [Manual Testing](#manual-testing)
-
 - [Bugs](#bugs)
 
 <!-- /TOC -->
@@ -27,20 +24,20 @@ All HTML pages were run though the [nu-html-checker](https://validator.w3.org/).
 
 After closing a couple open divs there were no errors in my HTML
 
-![open div](static/img/README-img/html.png)
+![open div](static/assets/img/README-img/html.png)
 
 
 ### CSS
 
 The only error I got was a missing s on a display-delay class, after fixing that there were no errors
 
-![css-validator](static/img/README-img/css.png)
+![css-validator](static/assets/img/README-img/css.png)
 
 ### Javascript
 
 I did not write the js myself, this I copied from the before mentioned template. With this said, there were no errors, just warnings. All missing semicolons were added but the warnings I left be
 
-![js-validator](static/img/README-img/javascript.png)
+![js-validator](static/assets/img/README-img/javascript.png)
 
 ### Python
 
@@ -50,7 +47,7 @@ Editor suggestions for python formatting were used, using Black. A PEP8 max line
 
 Lighthouse was used on all pages. Almost all pages returned around 90 scores on all categories, however, there were a few mentions in the console about error messages being shown in the console. WIll look into this till next project.:
 
-![lighthouse-green](static/img/README-img/lighthouse.png)
+![lighthouse](static/assets/img/README-img/lighthouse.png)
 
 ## Browser Testing
 
