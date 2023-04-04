@@ -463,3 +463,5 @@ Before starting the work, the project was deployed to Heroku. This was done earl
 ## Acknowledgements
 
 This website was built as part of the Full Stack Software Development course from Code Institute. I would like to thank my mentor Andre Aquilina, for his excellent feedback, guidance, patience and ability to explain things in ways I understand throughout the development of the project. I would also like to thank friends and family, who all took the time to look at the finished project to make sure it worked well and checked if I could improve things.
+
+I also wan to thank Tutor Support from Code Institute for helping me with my errors

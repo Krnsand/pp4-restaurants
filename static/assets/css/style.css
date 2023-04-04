@@ -487,7 +487,7 @@ section {
 # About (layout from template)
 --------------------------------------------------------------*/
 .about {
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680597537/static/assets/img/my-img/hero-about-back_rstjef.jpg");
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600200/static/assets/img/my-img/hero.82ba52ae1f63.jpg");
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -850,7 +850,7 @@ section {
 #violet {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457995/static/assets/img/my-img/violet-hero.601c9e448eca.jpg") top center;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600203/static/assets/img/my-img/violet-hero.601c9e448eca.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -880,7 +880,7 @@ section {
 }
 
 .violet-about {
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457988/static/assets/img/my-img/violet-about.d4efcc89d30d.jpg");
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600211/static/assets/img/my-img/violet-background.d4efcc89d30d.jpg");
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -966,7 +966,7 @@ section {
 #green {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680530090/static/assets/img/my-img/green-hero1.28a9bd684dc6.jpg") top center;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600209/static/assets/img/my-img/green-hero.28a9bd684dc6.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -996,7 +996,7 @@ section {
 }
 
 .green-about {
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457992/static/assets/img/my-img/green-about.e3ef859c6c16.jpg");
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600201/static/assets/img/my-img/green-background.e3ef859c6c16.jpg");
   background-size: cover;
   position: relative;
   padding: 80px 0;
@@ -1083,7 +1083,7 @@ section {
 #orange {
   width: 100%;
   height: 100vh;
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680420790/static/assets/img/my-img/orange-hero.947dac34d301.jpg") top center;
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600208/static/assets/img/my-img/orange-hero.c47aee46fa89.jpg") top center;
   background-size: cover;
   position: relative;
   padding: 0;
@@ -1113,7 +1113,7 @@ section {
 }
 
 .orange-about {
-  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680457985/static/assets/img/my-img/orange-background.f3814f641ec5.jpg");
+  background: url("https://res.cloudinary.com/djdc4rve5/image/upload/v1680600199/static/assets/img/my-img/orange-background.f3814f641ec5.jpg");
   background-size: cover;
   position: relative;
   padding: 80px 0;
